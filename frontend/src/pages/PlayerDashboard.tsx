@@ -36,7 +36,6 @@ import { GuildQuestsModal } from '../components/GuildQuestsModal';
 import { D20DuelArenaModal } from '../components/D20DuelArenaModal';
 import { LeaderboardModal } from '../components/LeaderboardModal';
 import { TavernWallAndMarketModal } from '../components/TavernWallAndMarketModal';
-import { RaidBossModal } from '../components/RaidBossModal';
 import { TalentsAndForgeModal } from '../components/TalentsAndForgeModal';
 import { PetsAndGamesModal } from '../components/PetsAndGamesModal';
 import { ClanTerritoryModal } from '../components/ClanTerritoryModal';
@@ -74,7 +73,6 @@ export const PlayerDashboard: React.FC<{ onNavigateShop: () => void }> = ({ onNa
 
   // Roadmap Modals (v1.5 to v3.6)
   const [isTavernWallOpen, setIsTavernWallOpen] = useState<boolean>(false);
-  const [isRaidBossOpen, setIsRaidBossOpen] = useState<boolean>(false);
   const [isTalentsForgeOpen, setIsTalentsForgeOpen] = useState<boolean>(false);
   const [isPetsGamesOpen, setIsPetsGamesOpen] = useState<boolean>(false);
   const [isClanTerritoryOpen, setIsClanTerritoryOpen] = useState<boolean>(false);
@@ -706,46 +704,8 @@ export const PlayerDashboard: React.FC<{ onNavigateShop: () => void }> = ({ onNa
         </button>
       </div>
 
-      {/* Centro de Actividades del Gremio */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-9 gap-2">
-        <button
-          onClick={() => {
-            sfx.playAudio('click');
-            sfx.haptic([30]);
-            setClanInitialTab('GENS');
-            setIsClanTerritoryOpen(true);
-          }}
-          className="p-2.5 rounded-xl bg-gradient-to-r from-amber-950/70 via-surface-card to-surface-card border border-amber-500/60 hover:border-amber-400 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md group text-left ring-1 ring-amber-500/20"
-        >
-          <span className="text-xl group-hover:scale-120 transition-transform">👑</span>
-          <div>
-            <div className="font-heading font-black text-xs text-amber-300 flex items-center gap-1">
-              <span>Facciones Gens</span>
-              <span className="text-[8px] font-mono px-1 py-0.2 rounded bg-amber-500/20 text-amber-200">REINO</span>
-            </div>
-            <div className="text-[10px] text-gray-400 font-serif">Duprian vs Vanert</div>
-          </div>
-        </button>
-
-        <button
-          onClick={() => {
-            sfx.playAudio('sword');
-            sfx.haptic([30]);
-            setClanInitialTab('SIEGES');
-            setIsClanTerritoryOpen(true);
-          }}
-          className="p-2.5 rounded-xl bg-gradient-to-r from-red-950/70 via-surface-card to-surface-card border border-red-500/60 hover:border-red-400 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md group text-left ring-1 ring-red-500/20"
-        >
-          <span className="text-xl group-hover:scale-120 transition-transform">🔥</span>
-          <div>
-            <div className="font-heading font-black text-xs text-red-400 flex items-center gap-1">
-              <span>Asedios de Clan</span>
-              <span className="text-[8px] font-mono px-1 py-0.2 rounded bg-red-500/20 text-red-200">GUERRA</span>
-            </div>
-            <div className="text-[10px] text-gray-400 font-serif">Nodos & Bastiones</div>
-          </div>
-        </button>
-
+      {/* Centro de Actividades Principales */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
         <button
           onClick={() => {
             sfx.playAudio('click');
@@ -781,36 +741,6 @@ export const PlayerDashboard: React.FC<{ onNavigateShop: () => void }> = ({ onNa
 
         <button
           onClick={() => {
-            sfx.playAudio('sword');
-            sfx.haptic([25]);
-            setIsRaidBossOpen(true);
-          }}
-          className="p-2.5 rounded-xl bg-gradient-to-r from-red-950/40 to-surface-card border border-red-500/40 hover:border-red-500 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group text-left"
-        >
-          <span className="text-xl group-hover:scale-110 transition-transform">🐉</span>
-          <div>
-            <div className="font-heading font-black text-xs text-red-400">Raid Boss</div>
-            <div className="text-[10px] text-gray-400 font-serif">Asedio Táctico</div>
-          </div>
-        </button>
-
-        <button
-          onClick={() => {
-            sfx.playAudio('click');
-            sfx.haptic([20]);
-            setIsTavernWallOpen(true);
-          }}
-          className="p-2.5 rounded-xl bg-surface-card border border-primary/30 hover:border-primary transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group text-left"
-        >
-          <span className="text-xl group-hover:scale-110 transition-transform">📜</span>
-          <div>
-            <div className="font-heading font-black text-xs text-primary">Muro & P2P</div>
-            <div className="text-[10px] text-gray-400 font-serif">Comunidad</div>
-          </div>
-        </button>
-
-        <button
-          onClick={() => {
             sfx.playAudio('click');
             sfx.haptic([20]);
             setIsTalentsForgeOpen(true);
@@ -836,21 +766,6 @@ export const PlayerDashboard: React.FC<{ onNavigateShop: () => void }> = ({ onNa
           <div>
             <div className="font-heading font-black text-xs text-emerald-400">Mascotas</div>
             <div className="text-[10px] text-gray-400 font-serif">& Minijuegos</div>
-          </div>
-        </button>
-
-        <button
-          onClick={() => {
-            sfx.playAudio('click');
-            sfx.haptic([20]);
-            onNavigateShop();
-          }}
-          className="p-2.5 rounded-xl bg-surface-card border border-amber-400/30 hover:border-amber-400 transition-all col-span-2 sm:col-span-1 flex items-center justify-center gap-2 cursor-pointer shadow-sm group text-left"
-        >
-          <span className="text-xl group-hover:scale-110 transition-transform">🛍️</span>
-          <div>
-            <div className="font-heading font-black text-xs text-amber-300">Bazar</div>
-            <div className="text-[10px] text-gray-400 font-serif">Tienda RPG</div>
           </div>
         </button>
       </div>
@@ -1736,6 +1651,27 @@ export const PlayerDashboard: React.FC<{ onNavigateShop: () => void }> = ({ onNa
       {/* ========================================================= */}
       {activeTab === 'CHRONICLES' && (
         <div className="space-y-5 animate-fadeIn">
+          {/* Muro de la Comunidad & Comercio P2P */}
+          <section className="bg-gradient-to-r from-primary/10 via-surface-card to-surface-card border border-primary/40 rounded-2xl p-4 shadow-md flex items-center justify-between gap-4">
+            <div className="space-y-1">
+              <h3 className="font-heading text-sm font-extrabold text-primary uppercase tracking-wider flex items-center gap-2">
+                <span>📜 Muro de la Taberna & Mercado P2P</span>
+              </h3>
+              <p className="text-xs text-gray-300 font-sans">
+                Publica anuncios, lee los rumores de los taberneros y comercia ítems directamente con la comunidad.
+              </p>
+            </div>
+            <button
+              onClick={() => {
+                sfx.playAudio('click');
+                sfx.haptic([20]);
+                setIsTavernWallOpen(true);
+              }}
+              className="bg-primary hover:bg-primary/90 text-black font-heading font-extrabold px-4 py-2 rounded-xl text-xs uppercase tracking-wider shrink-0 transition-all cursor-pointer shadow-md hover:scale-105"
+            >
+              Abrir Muro & P2P
+            </button>
+          </section>
           {/* Daily Quests Section */}
           {quests.length > 0 && (
             <section className="space-y-3">
@@ -1848,15 +1784,6 @@ export const PlayerDashboard: React.FC<{ onNavigateShop: () => void }> = ({ onNa
         onClose={() => setIsTavernWallOpen(false)}
         playerGold={player.gold}
         inventory={inventory}
-        onRefreshPlayer={loadData}
-      />
-
-      {/* V2.0.0: Asedio al Raid Boss Cooperativo */}
-      <RaidBossModal
-        isOpen={isRaidBossOpen}
-        onClose={() => setIsRaidBossOpen(false)}
-        playerLevel={player.level}
-        playerClass={player.secretClass || player.secret_class}
         onRefreshPlayer={loadData}
       />
 
