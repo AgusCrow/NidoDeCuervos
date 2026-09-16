@@ -7,8 +7,11 @@ import { LoginPage } from './pages/LoginPage';
 import { DownloadsPage } from './pages/DownloadsPage';
 import { ThemeSelectorModal, ThemeType, THEME_OPTIONS } from './components/ThemeSelectorModal';
 import { UpdateNotificationModal, VersionData } from './components/UpdateNotificationModal';
-import { Shield, Sparkles, Tv, UserCheck, Store, LogOut, User, Palette, Download, Info } from 'lucide-react';
+import { ProfileSettingsModal } from './components/ProfileSettingsModal';
+import { LeaderboardModal } from './components/LeaderboardModal';
+import { Shield, Sparkles, Tv, UserCheck, Store, LogOut, User, Palette, Download, Info, ChevronDown, ChevronRight, Trophy, Volume2, VolumeX } from 'lucide-react';
 import { getStoredToken, clearStoredToken, api } from './services/api';
+import { sfx } from './services/sfx';
 import { Player } from './types';
 
 export const App: React.FC = () => {
@@ -18,6 +21,10 @@ export const App: React.FC = () => {
   const [userLoading, setUserLoading] = useState<boolean>(Boolean(getStoredToken()));
   const [versionData, setVersionData] = useState<VersionData | null>(null);
   const [isVersionModalOpen, setIsVersionModalOpen] = useState<boolean>(false);
+  const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState<boolean>(false);
+  const [isProfileSettingsOpen, setIsProfileSettingsOpen] = useState<boolean>(false);
+  const [isLeaderboardOpen, setIsLeaderboardOpen] = useState<boolean>(false);
+  const [sfxEnabled, setSfxEnabled] = useState<boolean>(sfx.enabled);
 
   // Theme state: 'medieval' | 'modern' | 'arcane' | 'elven' | 'crimson'
   const [theme, setTheme] = useState<ThemeType>(() => {
@@ -258,43 +265,124 @@ export const App: React.FC = () => {
           )}
         </nav>
 
-        {/* User Identity Info, Theme Switcher, Version Badge & Logout */}
-        <div className="flex items-center gap-2 md:gap-3">
-          {/* Version Badge Button */}
+        {/* Botón de Perfil con Menú Desplegable Integrado */}
+        <div className="relative">
           <button
-            onClick={() => setIsVersionModalOpen(true)}
-            className="px-2.5 py-1.5 rounded-xl bg-surface-card hover:bg-surface-border text-xs font-mono font-bold text-gray-300 hover:text-white border border-surface-border flex items-center gap-1.5 transition-all cursor-pointer shadow-sm hover:scale-105 active:scale-95"
-            title="Ver Pergamino de Novedades de la Versión"
+            onClick={() => setIsProfileDropdownOpen(!isProfileDropdownOpen)}
+            className="px-3 py-1.5 rounded-xl bg-gradient-to-r from-primary/20 via-surface-card to-surface-card hover:border-primary border-2 border-primary/70 text-xs font-heading font-extrabold text-white flex items-center gap-2 transition-all shadow-[0_0_15px_var(--accent-glow)] cursor-pointer hover:scale-105 active:scale-95"
+            title="Abrir Menú de Aventurero & Ajustes"
           >
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span>v{versionData?.currentVersion || '1.2.0'}</span>
-          </button>
-
-          {/* Theme Switcher Button */}
-          <button
-            onClick={() => setIsThemeModalOpen(true)}
-            className="px-3 py-1.5 rounded-xl bg-gradient-to-r from-primary/20 via-surface-card to-surface-card hover:from-primary/30 text-xs font-heading font-extrabold text-primary border-2 border-primary/80 flex items-center gap-2 transition-all shadow-[0_0_15px_var(--accent-glow)] cursor-pointer hover:scale-105 active:scale-95 whitespace-nowrap"
-            title="Cambiar Tema Visual RPG"
-          >
-            <Palette className="w-4 h-4 text-primary animate-pulse shrink-0" />
-            <span className="inline text-[11px] font-extrabold uppercase tracking-wider">
-              TEMA: {currentThemeObj.name}
+            <div className="w-6 h-6 rounded-full bg-primary text-black font-black flex items-center justify-center text-xs shadow-sm">
+              {currentUser.name ? currentUser.name.charAt(0).toUpperCase() : 'A'}
+            </div>
+            <span className="hidden sm:inline font-bold text-white">{currentUser.name}</span>
+            <span className="text-[10px] text-primary font-mono font-extrabold hidden md:inline">
+              (Nvl {currentUser.level})
             </span>
+            <ChevronDown className={`w-4 h-4 text-primary transition-transform ${isProfileDropdownOpen ? 'rotate-180' : ''}`} />
           </button>
 
-          <div className="hidden sm:flex items-center gap-2 bg-surface-card px-3 py-1 rounded-lg border border-surface-border text-xs">
-            <User className="w-3.5 h-3.5 text-primary" />
-            <span className="font-cinzel font-bold text-white">{currentUser.name}</span>
-            <span className="text-[10px] text-magic font-cinzel">({currentUser.secretClass})</span>
-          </div>
+          {/* Menú Desplegable de Perfil */}
+          {isProfileDropdownOpen && (
+            <div className="absolute right-0 mt-2 w-72 bg-surface-card/95 backdrop-blur-xl border-2 border-primary/60 rounded-2xl p-3 shadow-[0_10px_35px_rgba(0,0,0,0.8)] z-50 space-y-2 animate-fadeIn">
+              {/* Encabezado del Perfil */}
+              <div className="p-2.5 rounded-xl bg-surface border border-surface-border flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center text-primary font-heading font-black text-sm shrink-0">
+                  {currentUser.name ? currentUser.name.charAt(0).toUpperCase() : 'A'}
+                </div>
+                <div className="min-w-0">
+                  <div className="font-heading font-bold text-white text-xs truncate">{currentUser.name}</div>
+                  <div className="text-[10px] text-magic font-mono truncate">
+                    {currentUser.secretClass || currentUser.secret_class} | Nvl {currentUser.level}
+                  </div>
+                  <div className="text-[9px] text-gray-400 font-sans truncate">{currentUser.username}</div>
+                </div>
+              </div>
 
-          <button
-            onClick={handleLogout}
-            className="p-2 rounded-lg bg-surface-card hover:bg-crimson/20 text-gray-400 hover:text-crimson border border-surface-border transition-colors"
-            title="Cerrar Sesión"
-          >
-            <LogOut className="w-4 h-4" />
-          </button>
+              <div className="divide-y divide-surface-border/60">
+                {/* 1. Ajustes de Perfil */}
+                <button
+                  onClick={() => {
+                    setIsProfileDropdownOpen(false);
+                    setIsProfileSettingsOpen(true);
+                  }}
+                  className="w-full p-2.5 hover:bg-surface rounded-lg text-left text-xs font-heading font-bold text-gray-200 hover:text-white flex items-center justify-between transition-colors cursor-pointer"
+                >
+                  <span className="flex items-center gap-2">
+                    <User className="w-4 h-4 text-primary" /> Ajustes de Perfil & Datos
+                  </span>
+                  <ChevronRight className="w-3.5 h-3.5 text-gray-500" />
+                </button>
+
+                {/* 2. Rankings Unificados (2 Columnas) */}
+                <button
+                  onClick={() => {
+                    setIsProfileDropdownOpen(false);
+                    setIsLeaderboardOpen(true);
+                  }}
+                  className="w-full p-2.5 hover:bg-surface rounded-lg text-left text-xs font-heading font-bold text-amber-300 hover:text-amber-200 flex items-center justify-between transition-colors cursor-pointer"
+                >
+                  <span className="flex items-center gap-2">
+                    <Trophy className="w-4 h-4 text-amber-400 animate-pulse" /> Rankings (Jugadores & Clanes)
+                  </span>
+                  <ChevronRight className="w-3.5 h-3.5 text-amber-500" />
+                </button>
+
+                {/* 3. Selector de Tema Visual */}
+                <button
+                  onClick={() => {
+                    setIsProfileDropdownOpen(false);
+                    setIsThemeModalOpen(true);
+                  }}
+                  className="w-full p-2.5 hover:bg-surface rounded-lg text-left text-xs font-heading font-bold text-gray-200 hover:text-white flex items-center justify-between transition-colors cursor-pointer"
+                >
+                  <span className="flex items-center gap-2">
+                    <Palette className="w-4 h-4 text-purple-400" /> Tema: <span className="text-primary font-mono text-[11px] uppercase">{currentThemeObj.name}</span>
+                  </span>
+                  <ChevronRight className="w-3.5 h-3.5 text-gray-500" />
+                </button>
+
+                {/* 4. Efectos de Sonido */}
+                <button
+                  onClick={() => {
+                    const newState = sfx.toggle();
+                    setSfxEnabled(newState);
+                  }}
+                  className="w-full p-2.5 hover:bg-surface rounded-lg text-left text-xs font-heading font-bold text-gray-200 hover:text-white flex items-center justify-between transition-colors cursor-pointer"
+                >
+                  <span className="flex items-center gap-2">
+                    {sfxEnabled ? <Volume2 className="w-4 h-4 text-emerald" /> : <VolumeX className="w-4 h-4 text-gray-500" />}
+                    Efectos de Sonido (SFX)
+                  </span>
+                  <span className={`text-[10px] font-mono px-2 py-0.5 rounded font-bold ${sfxEnabled ? 'bg-emerald/20 text-emerald' : 'bg-surface text-gray-400'}`}>
+                    {sfxEnabled ? 'ON' : 'OFF'}
+                  </span>
+                </button>
+
+                {/* 5. Versión del Sistema */}
+                <button
+                  onClick={() => {
+                    setIsProfileDropdownOpen(false);
+                    setIsVersionModalOpen(true);
+                  }}
+                  className="w-full p-2.5 hover:bg-surface rounded-lg text-left text-xs font-heading font-bold text-gray-300 hover:text-white flex items-center justify-between transition-colors cursor-pointer"
+                >
+                  <span className="flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-primary" /> Novedades Versión
+                  </span>
+                  <span className="text-[10px] font-mono text-gray-400">v{versionData?.currentVersion || '1.4.0'}</span>
+                </button>
+
+                {/* 6. Cerrar Sesión */}
+                <button
+                  onClick={handleLogout}
+                  className="w-full p-2.5 hover:bg-crimson/20 rounded-lg text-left text-xs font-heading font-bold text-crimson flex items-center gap-2 transition-colors cursor-pointer pt-2"
+                >
+                  <LogOut className="w-4 h-4 text-crimson" /> Cerrar Sesión
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </header>
 
@@ -380,6 +468,21 @@ export const App: React.FC = () => {
           }
           setCurrentTab('DOWNLOADS');
         }}
+      />
+
+      {/* Profile Settings Modal */}
+      <ProfileSettingsModal
+        isOpen={isProfileSettingsOpen}
+        onClose={() => setIsProfileSettingsOpen(false)}
+        currentUser={currentUser}
+        onRefreshUser={loadUser}
+      />
+
+      {/* Unified 2-Column Rankings Modal */}
+      <LeaderboardModal
+        isOpen={isLeaderboardOpen}
+        onClose={() => setIsLeaderboardOpen(false)}
+        currentUser={currentUser}
       />
     </div>
   );

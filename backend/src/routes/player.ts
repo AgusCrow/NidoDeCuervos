@@ -1,4 +1,4 @@
-import { Router, Response } from 'express';
+import { Router, Request, Response } from 'express';
 import { authMiddleware, AuthenticatedRequest } from '../middleware/auth';
 import { getDb, RAID_BOSS_CATALOG, CLASS_SKILL_TREES, ItemRow, PlayerRaidCombatState, RaidBossState } from '../db';
 import { sseHub } from '../sseHub';
@@ -14,22 +14,62 @@ import crypto from 'crypto';
 const router = Router();
 
 // GET /api/v1/player/leaderboard - Salón de la Fama (Acceso público para Taberna, TV y Jugadores)
-router.get('/leaderboard', async (req, res: Response) => {
+router.get('/leaderboard', async (req: Request, res: Response) => {
   try {
     const db = await getDb();
     const allPlayers = await db.all(
       'SELECT id, name, username, secret_class, level, xp, gold, pvp_wins, pvp_losses, equipped_title FROM players WHERE role != "DM"'
     );
 
-    const topLevel = [...allPlayers].sort((a, b) => b.level - a.level || b.xp - a.xp).slice(0, 5);
-    const topGold = [...allPlayers].sort((a, b) => b.gold - a.gold).slice(0, 5);
-    const topDuels = [...allPlayers].sort((a, b) => (b.pvp_wins || 0) - (a.pvp_wins || 0)).slice(0, 5);
+    const playersLeaderboard = [...allPlayers].sort((a, b) => b.level - a.level || b.xp - a.xp || b.gold - a.gold);
+
+    const clansLeaderboard = [
+      { id: 'clan_1', name: 'Gremio Sol Astral', leaderName: 'Vaelin "El Arcano"', level: 18, points: 4850, wins: 42, members: 28, maxMembers: 30, crest: '☀️' },
+      { id: 'clan_2', name: 'Gremio Rosa Carmesí', leaderName: 'Brida "La Furia"', level: 16, points: 4120, wins: 35, members: 25, maxMembers: 30, crest: '🌹' },
+      { id: 'clan_3', name: 'Legión del Abismo', leaderName: 'Valerius "Cuervo"', level: 15, points: 3900, wins: 31, members: 24, maxMembers: 30, crest: '🦅' },
+      { id: 'clan_4', name: 'Orden de los Cuervos', leaderName: 'Zacrow', level: 14, points: 3250, wins: 26, members: 20, maxMembers: 30, crest: '👑' },
+      { id: 'clan_5', name: 'Vanguardia Arcana', leaderName: 'Kaelen', level: 12, points: 2780, wins: 19, members: 18, maxMembers: 30, crest: '🔮' },
+      { id: 'clan_6', name: 'Hermandad de Sombras', leaderName: 'Nyx', level: 10, points: 2100, wins: 14, members: 15, maxMembers: 30, crest: '🗡️' }
+    ];
 
     return res.json({
       success: true,
-      topLevel,
-      topGold,
-      topDuels
+      playersLeaderboard,
+      clansLeaderboard,
+      topLevel: playersLeaderboard.slice(0, 5),
+      topGold: [...allPlayers].sort((a, b) => b.gold - a.gold).slice(0, 5),
+      topDuels: [...allPlayers].sort((a, b) => (b.pvp_wins || 0) - (a.pvp_wins || 0)).slice(0, 5)
+    });
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message });
+  }
+});
+
+// POST /api/v1/player/update-profile - Actualización de perfil del jugador
+router.post('/update-profile', authMiddleware, async (req: AuthenticatedRequest, res: Response) => {
+  try {
+    const db = await getDb();
+    const user = req.user!;
+    const { name, username, password } = req.body;
+
+    const freshUser = await db.get('SELECT * FROM players WHERE id = ?', [user.id]);
+    if (!freshUser) {
+      return res.status(404).json({ error: 'Jugador no encontrado' });
+    }
+
+    if (name && String(name).trim()) freshUser.name = String(name).trim();
+    if (username && String(username).trim()) freshUser.username = String(username).trim();
+    if (password && String(password).trim()) freshUser.password = String(password).trim();
+
+    await db.run(
+      'UPDATE players SET name = ?, username = ?, password = ? WHERE id = ?',
+      [freshUser.name, freshUser.username, freshUser.password, user.id]
+    );
+
+    return res.json({
+      success: true,
+      message: '¡Perfil de aventurero actualizado exitosamente!',
+      player: freshUser
     });
   } catch (err: any) {
     return res.status(500).json({ error: err.message });
