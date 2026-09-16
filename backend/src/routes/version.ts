@@ -23,8 +23,8 @@ export interface VersionInfo {
 }
 
 const SYSTEM_VERSION_DATA: VersionInfo = {
-  currentVersion: '3.7.1',
-  versionCode: 371,
+  currentVersion: '3.7.2',
+  versionCode: 372,
   minSupportedVersion: '1.0.0',
   releaseDate: '2026-09-16',
   appName: 'El Gremio de la Taberna RPG',
@@ -35,6 +35,17 @@ const SYSTEM_VERSION_DATA: VersionInfo = {
   },
   changelog: [
     {
+      version: '3.7.2',
+      date: '2026-09-16',
+      title: 'Rediseño UI & Temas Dinámicos',
+      highlights: [
+        'Rediseño UI completo con 3 estilos seleccionables: Fantasía Gótica, Glassmorphism Premium y Flat E-Sports',
+        'Integración de paleta de colores, familias tipográficas y efectos traslúcidos optimizados',
+        'Mejora de contraste y velocidad de lectura en dispositivos móviles y de escritorio'
+      ],
+      isLatest: true
+    },
+    {
       version: '3.7.1',
       date: '2026-09-16',
       title: 'UI Refactor & Menú Desplegable de Perfil',
@@ -43,7 +54,7 @@ const SYSTEM_VERSION_DATA: VersionInfo = {
         '🏆 Rankings Unificados a 2 Columnas: Visualización paralela de Jugadores y Clanes con Podio Top 3 y tarjeta fija de Tu Posición Actual.',
         '🛠️ Reestructuración de Barra Táctica: Limpieza de accesos redundantes en el dashboard principal y reubicación del Muro & P2P en Crónicas.'
       ],
-      isLatest: true
+      isLatest: false
     },
     {
       version: '3.7.0',

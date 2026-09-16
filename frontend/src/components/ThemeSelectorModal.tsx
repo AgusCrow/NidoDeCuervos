@@ -1,7 +1,7 @@
 import React from 'react';
-import { X, Check, Palette, Sparkles, Shield, Flame, Trees, Wand2 } from 'lucide-react';
+import { X, Check, Palette, Crown, Layers, Zap, Trees, Flame } from 'lucide-react';
 
-export type ThemeType = 'medieval' | 'modern' | 'arcane' | 'elven' | 'crimson';
+export type ThemeType = 'gothic' | 'glass' | 'flat' | 'medieval' | 'modern' | 'arcane' | 'elven' | 'crimson';
 
 export interface ThemeOption {
   id: ThemeType;
@@ -17,37 +17,37 @@ export interface ThemeOption {
 
 export const THEME_OPTIONS: ThemeOption[] = [
   {
-    id: 'medieval',
-    name: 'La Taberna Ancestral',
-    badge: 'Fantasía Clásica',
-    description: 'La calidez de la madera noble, pergaminos antiguos y jarras de hidromiel bañadas en oro brillante.',
-    icon: <Shield className="w-5 h-5 text-amber-400" />,
-    primaryColor: '#f59e0b',
-    bgColor: '#090a0f',
-    cardColor: '#181c28',
-    borderColor: '#334155'
+    id: 'gothic',
+    name: '1. Fantasía Oscura & Gótico',
+    badge: 'Dorado & Bronce Noble',
+    description: 'Estética gótica cargada de mística medieval, tonos madera oscura, pergamino antiguo, jarras de hidromiel y reliquias en oro forjado.',
+    icon: <Crown className="w-5 h-5 text-amber-400" />,
+    primaryColor: '#d4af37',
+    bgColor: '#0c0a08',
+    cardColor: 'rgba(36, 24, 16, 0.75)',
+    borderColor: 'rgba(212, 175, 55, 0.4)'
   },
   {
-    id: 'modern',
-    name: 'Neócrata Cyberpunk 2077',
-    badge: 'Obsidiana & Neón HUD',
-    description: 'Matriz digital con redes de cian neón, paneles HUD angulares y tecnología de vanguardia.',
-    icon: <Sparkles className="w-5 h-5 text-cyan-400" />,
-    primaryColor: '#00f0ff',
-    bgColor: '#060815',
-    cardColor: '#141b2d',
-    borderColor: 'rgba(0, 240, 255, 0.4)'
+    id: 'glass',
+    name: '2. Glassmorphism Premium',
+    badge: 'Cristal Traslúcido & Helado',
+    description: 'Diseño ultra moderno con cristalería profunda (blur 28px), reflejos de luz especular, degradados azul noche y acentos cian cristalinos.',
+    icon: <Layers className="w-5 h-5 text-cyan-400" />,
+    primaryColor: '#38bdf8',
+    bgColor: '#060913',
+    cardColor: 'rgba(30, 41, 59, 0.45)',
+    borderColor: 'rgba(255, 255, 255, 0.2)'
   },
   {
-    id: 'arcane',
-    name: 'Grimorio del Nigromante',
-    badge: 'Mística Cósmica',
-    description: 'Rituales de púrpura estelar, abismos oscuros y resplandor de magia etérea de invocación.',
-    icon: <Wand2 className="w-5 h-5 text-purple-400" />,
-    primaryColor: '#a855f7',
-    bgColor: '#0b0518',
-    cardColor: '#20103e',
-    borderColor: '#5b21b6'
+    id: 'flat',
+    name: '3. Flat E-Sports Minimalista',
+    badge: 'Limpio & Alto Contraste',
+    description: 'Diseño plano moderno para e-sports, enfocado en legibilidad máxima sin sombras ni efectos distractores. Tipografía Inter de alta precisión.',
+    icon: <Zap className="w-5 h-5 text-emerald-400" />,
+    primaryColor: '#10b981',
+    bgColor: '#0a0d14',
+    cardColor: '#192234',
+    borderColor: '#2a364f'
   },
   {
     id: 'elven',
@@ -62,8 +62,8 @@ export const THEME_OPTIONS: ThemeOption[] = [
   },
   {
     id: 'crimson',
-    name: 'Forja Sangrienta del Basilisco',
-    badge: 'Furia Vampírica',
+    name: 'Forja Sangrienta Basilisco',
+    badge: 'Furia Carmesí',
     description: 'La agresividad del fuego ardiente, el acero gótico afilado y el carmesí de las batallas épicas.',
     icon: <Flame className="w-5 h-5 text-red-500" />,
     primaryColor: '#ef4444',
@@ -102,10 +102,10 @@ export const ThemeSelectorModal: React.FC<ThemeSelectorModalProps> = ({
             </div>
             <div>
               <h3 className="font-heading text-xl font-extrabold text-white tracking-wider uppercase">
-                SELECTOR DE TEMAS RPG
+                REDISEÑOS VISUALES RPG
               </h3>
               <p className="text-xs text-gray-300 font-sans">
-                Cambia por completo la estética, fuentes y estructura de El Gremio
+                Selecciona entre los 3 estilos completos de rediseño de interfaz
               </p>
             </div>
           </div>
@@ -120,7 +120,10 @@ export const ThemeSelectorModal: React.FC<ThemeSelectorModalProps> = ({
         {/* Theme List */}
         <div className="space-y-3.5">
           {THEME_OPTIONS.map((theme) => {
-            const isSelected = currentTheme === theme.id;
+            const isSelected = currentTheme === theme.id || 
+              (currentTheme === 'medieval' && theme.id === 'gothic') ||
+              (currentTheme === 'modern' && theme.id === 'glass') ||
+              (currentTheme === 'arcane' && theme.id === 'flat');
             return (
               <button
                 key={theme.id}
@@ -185,7 +188,7 @@ export const ThemeSelectorModal: React.FC<ThemeSelectorModalProps> = ({
             onClick={onClose}
             className="w-full max-w-xs mx-auto py-3 bg-primary text-black font-extrabold rounded-xl shadow-[0_0_20px_var(--accent-glow)] hover:brightness-110 active:scale-95 transition-all text-xs uppercase cursor-pointer tracking-wider font-heading"
           >
-            Aceptar / Guardar Tema
+            Aceptar / Aplicar Rediseño
           </button>
         </div>
       </div>
