@@ -1,0 +1,35 @@
+{
+  "name": "Nido de Cuervos RPG",
+  "short_name": "Nido de Cuervos",
+  "description": "Sistema RPG NFC Presencial, Duelos PvP, Desafíos Diarios y Taberna en Vivo",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#0f0e17",
+  "theme_color": "#f59e0b",
+  "scope": "/",
+  "lang": "es-AR",
+  "categories": ["games", "entertainment", "social"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "author": "El Gremio RPG Team",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led_green",
+      "top": -120,
+      "left": 140,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_red",
+      "top": -120,
+      "left": 180,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": -150,
+      "left": 60,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_nfc1",
+      "top": 120,
+      "left": -140,
+      "attrs": { "color": "blue", "label": "Tarjeta NFC 1 (Kaelen)" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_nfc2",
+      "top": 180,
+      "left": -140,
+      "attrs": { "color": "green", "label": "Tarjeta NFC 2 (Thorin)" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_nfc3",
+      "top": 240,
+      "left": -140,
+      "attrs": { "color": "red", "label": "Tarjeta NFC 3 (Elara)" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.1", "led_green:C", "black", [ "v0" ] ],
+    [ "esp:GND.1", "led_red:C", "black", [ "v0" ] ],
+    [ "esp:GND.1", "buzzer:1", "black", [ "v0" ] ],
+    [ "esp:D12", "led_green:A", "green", [ "v0" ] ],
+    [ "esp:D14", "led_red:A", "red", [ "v0" ] ],
+    [ "esp:D13", "buzzer:2", "orange", [ "v0" ] ],
+    [ "esp:D25", "btn_nfc1:2.ATH", "blue", [ "v0" ] ],
+    [ "esp:GND.2", "btn_nfc1:1.PTH", "black", [ "v0" ] ],
+    [ "esp:D26", "btn_nfc2:2.ATH", "green", [ "v0" ] ],
+    [ "esp:GND.2", "btn_nfc2:1.PTH", "black", [ "v0" ] ],
+    [ "esp:D27", "btn_nfc3:2.ATH", "red", [ "v0" ] ],
+    [ "esp:GND.2", "btn_nfc3:1.PTH", "black", [ "v0" ] ]
+  ],
+  "surroundings": {}
+}

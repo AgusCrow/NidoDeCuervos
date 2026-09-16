@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: gremio_db
+    restart: always
+    environment:
+      POSTGRES_DB: rpg_gremio
+      POSTGRES_USER: gremio_user
+      POSTGRES_PASSWORD: gremio_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ../db/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql
+      - ../db/seed.sql:/docker-entrypoint-initdb.d/02_seed.sql
+    ports:
+      - "5432:5432"
+
+  broker:
+    image: eclipse-mosquitto:2.0
+    container_name: gremio_broker
+    restart: always
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+
+  server:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    container_name: gremio_server
+    restart: always
+    environment:
+      PORT: 3000
+      MQTT_BROKER_URL: mqtt://broker:1883
+      DB_PATH: /app/rpg_gremio.db
+    ports:
+      - "3000:3000"
+    depends_on:
+      - broker
+
+  web:
+    image: nginx:alpine
+    container_name: gremio_web
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ../frontend/dist:/usr/share/nginx/html:ro
+    depends_on:
+      - server
+
+volumes:
+  postgres_data:

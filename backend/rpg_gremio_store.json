@@ -1,0 +1,735 @@
+{
+  "players": [
+    {
+      "id": "usr_dm_master",
+      "nfc_uid": "NFC_DM_00000000",
+      "name": "Dungeon Master Admin",
+      "secret_class": "MAGE",
+      "role": "DM",
+      "xp": 9999,
+      "gold": 9999,
+      "level": 99,
+      "private_token": "dm_secret_token_777",
+      "created_at": "2026-08-27T13:22:10.810Z",
+      "username": "dungeon_master_admin",
+      "password": "gremio123",
+      "streak_days": 0,
+      "pvp_wins": 0,
+      "pvp_losses": 0,
+      "title": "Novicio Sediento"
+    },
+    {
+      "id": "usr_kaelen",
+      "nfc_uid": "04A1B2C3D4E5",
+      "name": "Kaelen el Pícaro",
+      "secret_class": "ROGUE",
+      "role": "PLAYER",
+      "xp": 2473,
+      "gold": 17,
+      "level": 10,
+      "private_token": "token_kaelen_rogue_101",
+      "created_at": "2026-08-27T13:22:10.811Z",
+      "last_scanned_at": "2026-08-27T13:49:57.094Z",
+      "username": "kaelen",
+      "password": "rogue123",
+      "streak_days": 3,
+      "pvp_wins": 6,
+      "pvp_losses": 3,
+      "title": "Segadora de Almas"
+    },
+    {
+      "id": "usr_thorin",
+      "nfc_uid": "04B2C3D4E5F6",
+      "name": "Thorin el Guerrero",
+      "secret_class": "WARRIOR",
+      "role": "PLAYER",
+      "xp": 3100,
+      "gold": 210,
+      "level": 15,
+      "private_token": "token_thorin_warrior_102",
+      "created_at": "2026-08-27T13:22:10.811Z",
+      "username": "thorin",
+      "password": "warrior123",
+      "streak_days": 3,
+      "pvp_wins": 6,
+      "pvp_losses": 1,
+      "title": "Campeón de la Tormenta"
+    },
+    {
+      "id": "usr_elara",
+      "nfc_uid": "04C3D4E5F6A7",
+      "name": "Elara la Maga",
+      "secret_class": "MAGE",
+      "role": "PLAYER",
+      "xp": 1890,
+      "gold": 95,
+      "level": 9,
+      "private_token": "token_elara_mage_103",
+      "created_at": "2026-08-27T13:22:10.811Z",
+      "username": "elara",
+      "password": "mage123",
+      "streak_days": 0,
+      "pvp_wins": 3,
+      "pvp_losses": 0,
+      "title": "Segadora de Almas"
+    },
+    {
+      "id": "usr_lyra",
+      "nfc_uid": "04D4E5F6A7B8",
+      "name": "Lyra la Barda",
+      "secret_class": "BARD",
+      "role": "PLAYER",
+      "xp": 1200,
+      "gold": 85,
+      "level": 7,
+      "private_token": "token_lyra_bard_104",
+      "created_at": "2026-08-27T13:22:10.811Z",
+      "username": "lyra",
+      "password": "bard123",
+      "streak_days": 3,
+      "pvp_wins": 6,
+      "pvp_losses": 3,
+      "title": "Sombra de la Barra"
+    },
+    {
+      "id": "usr_zacrow_admin",
+      "nfc_uid": "NFC_ZACROW_888888",
+      "name": "Zacrow (Dungeon Master)",
+      "username": "zacrow",
+      "password": "ZacrowManda9803",
+      "secret_class": "MAGE",
+      "role": "DM",
+      "xp": 9999,
+      "gold": 9999,
+      "level": 99,
+      "private_token": "dm_token_zacrow_2026",
+      "streak_days": 10,
+      "pvp_wins": 20,
+      "pvp_losses": 0,
+      "title": "Supremo Dungeon Master",
+      "created_at": "2026-09-04T22:16:46.725Z"
+    },
+    {
+      "id": "usr_a0e3c186",
+      "nfc_uid": "04A0E3C186A1B2",
+      "name": "Valquiria de las Sombras",
+      "username": "valquiria_de_las_sombras",
+      "password": "gremio123",
+      "secret_class": "ROGUE",
+      "role": "token_a0e3c186_1788560206860",
+      "xp": "valkyrie_hero",
+      "gold": "passValkyrie99",
+      "level": "9998881",
+      "created_at": "2026-09-04T22:16:46.860Z",
+      "streak_days": 1,
+      "pvp_wins": 1,
+      "pvp_losses": 1,
+      "title": "Novicio Sediento"
+    },
+    {
+      "id": "usr_e3be0928",
+      "nfc_uid": "04E3BE0928A1B2",
+      "name": "Valquiria de las Sombras",
+      "username": "valkyrie_hero",
+      "password": "passValkyrie99",
+      "secret_class": "ROGUE",
+      "role": "PLAYER",
+      "xp": 15,
+      "gold": 55,
+      "level": 1,
+      "private_token": "token_e3be0928_1788560368502",
+      "streak_days": 1,
+      "pvp_wins": 0,
+      "pvp_losses": 0,
+      "telegram_id": "9998881",
+      "created_at": "2026-09-04T22:19:28.503Z",
+      "last_daily_claim_at": "2026-09-04T22:19:28.505Z"
+    }
+  ],
+  "items": [
+    {
+      "id": "item_anti_fumble",
+      "name": "Escudo contra Pifias",
+      "description": "Transforma una pifia (R = 1) en un roll de 10.",
+      "gold_cost": 25,
+      "effect_type": "ANTI_FUMBLE",
+      "is_active_in_shop": true
+    },
+    {
+      "id": "item_fortune_dice",
+      "name": "Dado de la Fortuna",
+      "description": "Tira 2d20 y selecciona el valor más alto en el próximo scan.",
+      "gold_cost": 40,
+      "effect_type": "FORTUNE_DICE",
+      "is_active_in_shop": true
+    },
+    {
+      "id": "item_xp_elixir",
+      "name": "Elixir de Erudición",
+      "description": "Convierte todo el Oro obtenido en el doble de XP adicional.",
+      "gold_cost": 35,
+      "effect_type": "XP_ELIXIR",
+      "is_active_in_shop": true
+    },
+    {
+      "id": "item_resonance",
+      "name": "Poción de Resonancia",
+      "description": "Concede +50% de XP al próximo jugador en escanear la taberna.",
+      "gold_cost": 30,
+      "effect_type": "RESONANCE",
+      "is_active_in_shop": true
+    },
+    {
+      "id": "item_cursed_blood_pact",
+      "name": "🩸 Pacto de Sangre",
+      "description": "Triplica el Oro obtenido. Maldición: Si d20 <= 6, pierdes 20 XP y quedas incapacitado para duelos por 24h.",
+      "gold_cost": 15,
+      "effect_type": "CURSED_BLOOD_PACT",
+      "is_active_in_shop": true
+    },
+    {
+      "id": "item_cursed_necromancer_dice",
+      "name": "💀 Dado del Nigromante",
+      "description": "Tirada de 13 a 19 se considera Nat 20 (25 XP/25 Gold). Maldición: Si saca par menor a 10, otorga 0 XP y 0 Oro.",
+      "gold_cost": 20,
+      "effect_type": "CURSED_NECROMANCER_DICE",
+      "is_active_in_shop": true
+    },
+    {
+      "id": "item_cursed_misfortune_candle",
+      "name": "🕯️ Candelabro de la Desdicha",
+      "description": "Otorga +50 XP fijos. Maldición: El próximo aliado en escanear recibe -30% en su botín.",
+      "gold_cost": 10,
+      "effect_type": "CURSED_MISFORTUNE_CANDLE",
+      "is_active_in_shop": true
+    }
+  ],
+  "inventory": [],
+  "scan_logs": [
+    {
+      "id": "log_02c61a4e-2a1e-418f-8809-aa647792f334",
+      "player_id": "usr_kaelen",
+      "raw_roll": 10,
+      "final_roll": 10,
+      "xp_awarded": 10,
+      "gold_awarded": 13,
+      "modifiers_applied": "[\"Pasiva Pícaro: +30% Oro\"]",
+      "created_at": "2026-08-27T13:43:28.028Z"
+    },
+    {
+      "id": "log_05ca9179-18c5-4c3f-879b-fc340599234f",
+      "player_id": "usr_kaelen",
+      "raw_roll": 13,
+      "final_roll": 13,
+      "xp_awarded": 13,
+      "gold_awarded": 17,
+      "modifiers_applied": "[\"Pasiva Pícaro: +30% Oro\"]",
+      "created_at": "2026-08-27T13:49:57.095Z"
+    }
+  ],
+  "global_states": [
+    {
+      "key": "tavern_buff",
+      "value": "{\"active\":false,\"name\":\"Ninguno\",\"xp_multiplier\":1,\"expires_at\":null}",
+      "updated_at": "2026-08-27T13:22:10.811Z"
+    },
+    {
+      "key": "resonance_buff",
+      "value": "{\"active\":false,\"bonus_xp_pct\":50,\"granted_by\":null}",
+      "updated_at": "2026-08-27T13:22:10.811Z"
+    }
+  ],
+  "titles": [
+    {
+      "id": "title_01",
+      "name": "🎲 Favorito de la Fortuna",
+      "description": "Obtener 3 Nat 20 seguidos en la taberna.",
+      "category": "LUCK",
+      "req_type": "NAT20_STREAK",
+      "req_value": 3,
+      "icon": "🎲"
+    },
+    {
+      "id": "title_02",
+      "name": "🥉 Novato de la Taberna",
+      "description": "Iniciar la travesía en la taberna (Nivel 1+).",
+      "category": "LEVEL",
+      "req_type": "LEVEL",
+      "req_value": 1,
+      "icon": "🥉"
+    },
+    {
+      "id": "title_03",
+      "name": "🥈 Aventurero Consagrado",
+      "description": "Alcanzar el Nivel 5.",
+      "category": "LEVEL",
+      "req_type": "LEVEL",
+      "req_value": 5,
+      "icon": "🥈"
+    },
+    {
+      "id": "title_04",
+      "name": "🥇 Héroe de la Taberna",
+      "description": "Alcanzar el Nivel 10.",
+      "category": "LEVEL",
+      "req_type": "LEVEL",
+      "req_value": 10,
+      "icon": "🥇"
+    },
+    {
+      "id": "title_05",
+      "name": "👑 Leyenda Viviente",
+      "description": "Alcanzar el Nivel 25.",
+      "category": "LEVEL",
+      "req_type": "LEVEL",
+      "req_value": 25,
+      "icon": "👑"
+    },
+    {
+      "id": "title_06",
+      "name": "🔱 Titán del Gremio",
+      "description": "Alcanzar el Nivel 50.",
+      "category": "LEVEL",
+      "req_type": "LEVEL",
+      "req_value": 50,
+      "icon": "🔱"
+    },
+    {
+      "id": "title_07",
+      "name": "🛡️ Escudo Inquebrantable",
+      "description": "Alcanzar Nivel 10 como Guerrero.",
+      "category": "CLASS",
+      "req_type": "CLASS_LEVEL_WARRIOR",
+      "req_value": 10,
+      "icon": "🛡️"
+    },
+    {
+      "id": "title_08",
+      "name": "🧙‍♂️ Archimago Arcano",
+      "description": "Alcanzar Nivel 10 como Mago.",
+      "category": "CLASS",
+      "req_type": "CLASS_LEVEL_MAGE",
+      "req_value": 10,
+      "icon": "🧙‍♂️"
+    },
+    {
+      "id": "title_09",
+      "name": "🗡️ Sombra Nocturna",
+      "description": "Alcanzar Nivel 10 como Pícaro.",
+      "category": "CLASS",
+      "req_type": "CLASS_LEVEL_ROGUE",
+      "req_value": 10,
+      "icon": "🗡️"
+    },
+    {
+      "id": "title_10",
+      "name": "🎭 Maestro Minstrel",
+      "description": "Alcanzar Nivel 10 como Bardo.",
+      "category": "CLASS",
+      "req_type": "CLASS_LEVEL_BARD",
+      "req_value": 10,
+      "icon": "🎭"
+    },
+    {
+      "id": "title_11",
+      "name": "⚔️ Iniciado en la Arena",
+      "description": "Ganar tu primer Duelo PvP.",
+      "category": "PVP",
+      "req_type": "PVP_WINS",
+      "req_value": 1,
+      "icon": "⚔️"
+    },
+    {
+      "id": "title_12",
+      "name": "🩸 Sediento de Sangre",
+      "description": "Ganar 5 Duelos PvP.",
+      "category": "PVP",
+      "req_type": "PVP_WINS",
+      "req_value": 5,
+      "icon": "🩸"
+    },
+    {
+      "id": "title_13",
+      "name": "🏆 El Invicto",
+      "description": "Ganar 10 Duelos PvP.",
+      "category": "PVP",
+      "req_type": "PVP_WINS",
+      "req_value": 10,
+      "icon": "🏆"
+    },
+    {
+      "id": "title_14",
+      "name": "👑 Señor de la Arena",
+      "description": "Ganar 25 Duelos PvP.",
+      "category": "PVP",
+      "req_type": "PVP_WINS",
+      "req_value": 25,
+      "icon": "👑"
+    },
+    {
+      "id": "title_15",
+      "name": "💀 Gladiador Implacable",
+      "description": "Ganar 50 Duelos PvP.",
+      "category": "PVP",
+      "req_type": "PVP_WINS",
+      "req_value": 50,
+      "icon": "💀"
+    },
+    {
+      "id": "title_16",
+      "name": "💰 Monedero Lleno",
+      "description": "Acumular 100 de Oro.",
+      "category": "GOLD",
+      "req_type": "GOLD",
+      "req_value": 100,
+      "icon": "💰"
+    },
+    {
+      "id": "title_17",
+      "name": "🏦 Tesorero de la Taberna",
+      "description": "Acumular 500 de Oro.",
+      "category": "GOLD",
+      "req_type": "GOLD",
+      "req_value": 500,
+      "icon": "🏦"
+    },
+    {
+      "id": "title_18",
+      "name": "🪙 Magnate del Gremio",
+      "description": "Acumular 1,000 de Oro.",
+      "category": "GOLD",
+      "req_type": "GOLD",
+      "req_value": 1000,
+      "icon": "🪙"
+    },
+    {
+      "id": "title_19",
+      "name": "💎 Rey Midas",
+      "description": "Acumular 5,000 de Oro.",
+      "category": "GOLD",
+      "req_type": "GOLD",
+      "req_value": 5000,
+      "icon": "💎"
+    },
+    {
+      "id": "title_20",
+      "name": "🎰 Millonario de la Casa",
+      "description": "Acumular 10,000 de Oro.",
+      "category": "GOLD",
+      "req_type": "GOLD",
+      "req_value": 10000,
+      "icon": "🎰"
+    },
+    {
+      "id": "title_21",
+      "name": "🎲 Toque de Suerte",
+      "description": "Sacar al menos 1 Nat 20.",
+      "category": "LUCK",
+      "req_type": "NAT20_COUNT",
+      "req_value": 1,
+      "icon": "🎲"
+    },
+    {
+      "id": "title_22",
+      "name": "⚡ Doble Destello",
+      "description": "Sacar 2 Nat 20 seguidos.",
+      "category": "LUCK",
+      "req_type": "NAT20_STREAK",
+      "req_value": 2,
+      "icon": "⚡"
+    },
+    {
+      "id": "title_23",
+      "name": "🕯️ Portador de la Maldición",
+      "description": "Usar el Candelabro de la Desdicha.",
+      "category": "ITEMS",
+      "req_type": "ITEM_USED_CANDLE",
+      "req_value": 1,
+      "icon": "🕯️"
+    },
+    {
+      "id": "title_24",
+      "name": "🩸 Pacto Oscuro",
+      "description": "Activar el Pacto de Sangre.",
+      "category": "ITEMS",
+      "req_type": "ITEM_USED_BLOOD_PACT",
+      "req_value": 1,
+      "icon": "🩸"
+    },
+    {
+      "id": "title_25",
+      "name": "💀 Resucitado por Nigromante",
+      "description": "Usar el Dado del Nigromante.",
+      "category": "ITEMS",
+      "req_type": "ITEM_USED_NECRO_DICE",
+      "req_value": 1,
+      "icon": "💀"
+    },
+    {
+      "id": "title_26",
+      "name": "🛡️ Pifia Inmune",
+      "description": "Bloquear pifia 1 con el Escudo contra Pifias.",
+      "category": "ITEMS",
+      "req_type": "ANTI_FUMBLE_USED",
+      "req_value": 1,
+      "icon": "🛡️"
+    },
+    {
+      "id": "title_27",
+      "name": "🏅 Frecuentador de la Casa",
+      "description": "Realizar 5 escaneos NFC.",
+      "category": "SCANS",
+      "req_type": "SCANS",
+      "req_value": 5,
+      "icon": "🏅"
+    },
+    {
+      "id": "title_28",
+      "name": "🚀 Parroquiano Fiel",
+      "description": "Realizar 15 escaneos NFC.",
+      "category": "SCANS",
+      "req_type": "SCANS",
+      "req_value": 15,
+      "icon": "🚀"
+    },
+    {
+      "id": "title_29",
+      "name": "🏠 Guardián de la Taberna",
+      "description": "Realizar 30 escaneos NFC.",
+      "category": "SCANS",
+      "req_type": "SCANS",
+      "req_value": 30,
+      "icon": "🏠"
+    },
+    {
+      "id": "title_30",
+      "name": "🌟 El Residente",
+      "description": "Realizar 60 escaneos NFC.",
+      "category": "SCANS",
+      "req_type": "SCANS",
+      "req_value": 60,
+      "icon": "🌟"
+    },
+    {
+      "id": "title_31",
+      "name": "🔥 Racha Encendida",
+      "description": "Racha de 3 días consecutivos.",
+      "category": "STREAK",
+      "req_type": "STREAK",
+      "req_value": 3,
+      "icon": "🔥"
+    },
+    {
+      "id": "title_32",
+      "name": "⚡ Racha Imparable",
+      "description": "Racha de 7 días consecutivos.",
+      "category": "STREAK",
+      "req_type": "STREAK",
+      "req_value": 7,
+      "icon": "⚡"
+    },
+    {
+      "id": "title_33",
+      "name": "🌌 Leyenda de la Racha",
+      "description": "Racha de 30 días consecutivos.",
+      "category": "STREAK",
+      "req_type": "STREAK",
+      "req_value": 30,
+      "icon": "🌌"
+    },
+    {
+      "id": "title_34",
+      "name": "🛍️ Comprador Compulsivo",
+      "description": "Comprar 5 ítems en la tienda.",
+      "category": "SHOP",
+      "req_type": "SHOP_PURCHASES",
+      "req_value": 5,
+      "icon": "🛍️"
+    },
+    {
+      "id": "title_35",
+      "name": "🎒 Coleccionista de Artefactos",
+      "description": "Comprar 15 ítems en la tienda.",
+      "category": "SHOP",
+      "req_type": "SHOP_PURCHASES",
+      "req_value": 15,
+      "icon": "🎒"
+    },
+    {
+      "id": "title_36",
+      "name": "📜 Cazador de Misiones",
+      "description": "Completar 5 misiones diarias.",
+      "category": "QUESTS",
+      "req_type": "QUESTS_COMPLETED",
+      "req_value": 5,
+      "icon": "📜"
+    },
+    {
+      "id": "title_37",
+      "name": "🎖️ Héroe de las Misiones",
+      "description": "Completar 20 misiones diarias.",
+      "category": "QUESTS",
+      "req_type": "QUESTS_COMPLETED",
+      "req_value": 20,
+      "icon": "🎖️"
+    },
+    {
+      "id": "title_38",
+      "name": "🔮 Sabio del Gremio",
+      "description": "Realizar 10 acciones registradas.",
+      "category": "SPECIAL",
+      "req_type": "ACTIONS",
+      "req_value": 10,
+      "icon": "🔮"
+    },
+    {
+      "id": "title_39",
+      "name": "⚡ Golpe Relámpago",
+      "description": "Ganar un Duelo PvP en la 1ª ronda.",
+      "category": "PVP",
+      "req_type": "FAST_DUEL_WIN",
+      "req_value": 1,
+      "icon": "⚡"
+    },
+    {
+      "id": "title_40",
+      "name": "🛡️ Muro de Piedra",
+      "description": "Ganar un Duelo PvP 2-0 sin perder rondas.",
+      "category": "PVP",
+      "req_type": "CLEAN_DUEL_WIN",
+      "req_value": 1,
+      "icon": "🛡️"
+    },
+    {
+      "id": "title_41",
+      "name": "🎲 Dados Calientes",
+      "description": "Tirada promedio de escaneo superior a 15.",
+      "category": "LUCK",
+      "req_type": "HIGH_AVG_ROLL",
+      "req_value": 15,
+      "icon": "🎲"
+    },
+    {
+      "id": "title_42",
+      "name": "🗡️ Asesino Furtivo",
+      "description": "Realizar un K.O. Instantáneo con Pícaro.",
+      "category": "CLASS",
+      "req_type": "ROGUE_KO",
+      "req_value": 1,
+      "icon": "🗡️"
+    },
+    {
+      "id": "title_43",
+      "name": "🧙‍♂️ Sobrecarga Arcana",
+      "description": "Ganar un Duelo usando la pasiva Arcana de Mago.",
+      "category": "CLASS",
+      "req_type": "MAGE_BUFF_WIN",
+      "req_value": 1,
+      "icon": "🧙‍♂️"
+    },
+    {
+      "id": "title_44",
+      "name": "🎭 Canto de Victoria",
+      "description": "Ganar un Duelo como Bardo con comisión extra.",
+      "category": "CLASS",
+      "req_type": "BARD_BONUS_WIN",
+      "req_value": 1,
+      "icon": "🎭"
+    },
+    {
+      "id": "title_45",
+      "name": "☕ Madrugador",
+      "description": "Escanear en la taberna entre las 6 AM y 9 AM.",
+      "category": "SPECIAL",
+      "req_type": "EARLY_SCAN",
+      "req_value": 1,
+      "icon": "☕"
+    },
+    {
+      "id": "title_46",
+      "name": "🌙 Noctámbulo de la Taberna",
+      "description": "Escanear en la taberna después de las 11 PM.",
+      "category": "SPECIAL",
+      "req_type": "LATE_SCAN",
+      "req_value": 1,
+      "icon": "🌙"
+    },
+    {
+      "id": "title_47",
+      "name": "👑 Favorito del DM",
+      "description": "Recibir una recompensa directa del Dungeon Master.",
+      "category": "SPECIAL",
+      "req_type": "DM_REWARD",
+      "req_value": 1,
+      "icon": "👑"
+    },
+    {
+      "id": "title_48",
+      "name": "🍻 Borracho Alegre",
+      "description": "Realizar escaneos en 3 fines de semana.",
+      "category": "SPECIAL",
+      "req_type": "WEEKEND_SCANS",
+      "req_value": 3,
+      "icon": "🍻"
+    },
+    {
+      "id": "title_49",
+      "name": "🗡️ Cazador de Sombras",
+      "description": "Derrotar a un Pícaro en Duelo PvP.",
+      "category": "PVP",
+      "req_type": "BEAT_ROGUE",
+      "req_value": 1,
+      "icon": "🗡️"
+    },
+    {
+      "id": "title_50",
+      "name": "🌌 Leyenda del Gremio",
+      "description": "Desbloquear 20 Títulos del Gremio.",
+      "category": "SPECIAL",
+      "req_type": "TITLES_UNLOCKED",
+      "req_value": 20,
+      "icon": "🌌"
+    }
+  ],
+  "player_titles": [],
+  "daily_quests": [
+    {
+      "id": "quest_01",
+      "title": "⚔️ Desafío de la Arena",
+      "description": "Completar o participar en 1 Duelo PvP en la taberna.",
+      "reward_xp": 25,
+      "reward_gold": 15,
+      "quest_type": "PVP_DUEL",
+      "target_value": 1
+    },
+    {
+      "id": "quest_02",
+      "title": "🎲 Prueba de la Suerte",
+      "description": "Obtener una tirada final de d20 >= 12 en tu próximo escaneo.",
+      "reward_xp": 30,
+      "reward_gold": 20,
+      "quest_type": "SCAN_ROLL",
+      "target_value": 12
+    },
+    {
+      "id": "quest_03",
+      "title": "🏠 Visita a la Casa",
+      "description": "Escanear tu tarjeta o celular NFC en la taberna presencial.",
+      "reward_xp": 20,
+      "reward_gold": 10,
+      "quest_type": "NFC_SCAN",
+      "target_value": 1
+    },
+    {
+      "id": "quest_04",
+      "title": "🛍️ Apoyo al Mercader",
+      "description": "Comprar cualquier ítem o brebaje en la tienda.",
+      "reward_xp": 15,
+      "reward_gold": 25,
+      "quest_type": "BUY_ITEM",
+      "target_value": 1
+    }
+  ],
+  "player_quests": [],
+  "pvp_challenges": []
+}

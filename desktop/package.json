@@ -1,0 +1,17 @@
+{
+  "name": "el-gremio-desktop",
+  "version": "1.0.0",
+  "description": "Aplicación de Escritorio Oficial - El Gremio de la Taberna RPG",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win"
+  },
+  "keywords": ["rpg", "nfc", "el-gremio", "taberna", "electron"],
+  "author": "Zacrow",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^31.3.1"
+  }
+}

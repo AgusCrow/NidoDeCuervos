@@ -1,0 +1,44 @@
+services:
+  broker:
+    image: eclipse-mosquitto:2.0
+    container_name: gremio_broker
+    restart: always
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./docker/mosquitto.conf:/mosquitto/config/mosquitto.conf
+
+  server:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: gremio_server
+    restart: always
+    environment:
+      PORT: 3000
+      MQTT_BROKER_URL: mqtt://broker:1883
+      DB_PATH: /app/data/rpg_gremio_store.json
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN}
+    volumes:
+      - gremio_data:/app/data
+    expose:
+      - "3000"
+    depends_on:
+      - broker
+
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: gremio_web
+    restart: always
+    ports:
+      - "8089:80"
+      - "8083:80"
+    depends_on:
+      - server
+
+volumes:
+  gremio_data:
+
