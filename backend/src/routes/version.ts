@@ -23,8 +23,8 @@ export interface VersionInfo {
 }
 
 const SYSTEM_VERSION_DATA: VersionInfo = {
-  currentVersion: '3.7.0',
-  versionCode: 370,
+  currentVersion: '3.7.1',
+  versionCode: 371,
   minSupportedVersion: '1.0.0',
   releaseDate: '2026-09-16',
   appName: 'El Gremio de la Taberna RPG',
@@ -34,6 +34,17 @@ const SYSTEM_VERSION_DATA: VersionInfo = {
     pwaUrl: '/'
   },
   changelog: [
+    {
+      version: '3.7.1',
+      date: '2026-09-16',
+      title: 'UI Refactor & Menú Desplegable de Perfil',
+      highlights: [
+        '👤 Menú Desplegable de Perfil: Consolidación de opciones (Ajustes de Perfil, SFX, Temas, Rankings y Sesión) en el icono del personaje.',
+        '🏆 Rankings Unificados a 2 Columnas: Visualización paralela de Jugadores y Clanes con Podio Top 3 y tarjeta fija de Tu Posición Actual.',
+        '🛠️ Reestructuración de Barra Táctica: Limpieza de accesos redundantes en el dashboard principal y reubicación del Muro & P2P en Crónicas.'
+      ],
+      isLatest: true
+    },
     {
       version: '3.7.0',
       date: '2026-09-16',
