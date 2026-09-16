@@ -223,6 +223,17 @@ export const App: React.FC = () => {
             <Store className="w-4 h-4" /> Tienda
           </button>
 
+          <button
+            onClick={() => setCurrentTab('RANKINGS')}
+            className={`px-3 py-1.5 rounded-lg font-cinzel text-xs font-bold transition-all flex items-center gap-1.5 ${
+              currentTab === 'RANKINGS'
+                ? 'bg-amber-400 text-black shadow-[0_0_12px_rgba(245,158,11,0.5)]'
+                : 'text-gray-400 hover:text-white hover:bg-surface-card'
+            }`}
+          >
+            <Trophy className="w-4 h-4 text-amber-400" /> Rankings
+          </button>
+
           {/* Downloads tab shown ONLY if not already inside the app */}
           {!isAppMode && (
             <button
@@ -318,7 +329,7 @@ export const App: React.FC = () => {
                 <button
                   onClick={() => {
                     setIsProfileDropdownOpen(false);
-                    setIsLeaderboardOpen(true);
+                    setCurrentTab('RANKINGS');
                   }}
                   className="w-full p-2.5 hover:bg-surface rounded-lg text-left text-xs font-heading font-bold text-amber-300 hover:text-amber-200 flex items-center justify-between transition-colors cursor-pointer"
                 >
@@ -370,7 +381,7 @@ export const App: React.FC = () => {
                   <span className="flex items-center gap-2">
                     <Sparkles className="w-4 h-4 text-primary" /> Novedades Versión
                   </span>
-                  <span className="text-[10px] font-mono text-gray-400">v{versionData?.currentVersion || '1.4.0'}</span>
+                  <span className="text-[10px] font-mono text-gray-400">v{versionData?.currentVersion || '3.7.1'}</span>
                 </button>
 
                 {/* 6. Cerrar Sesión */}
@@ -390,6 +401,7 @@ export const App: React.FC = () => {
       <main className="flex-1 pt-24 px-4 md:px-8">
         {currentTab === 'PLAYER' && <PlayerDashboard onNavigateShop={() => setCurrentTab('SHOP')} />}
         {currentTab === 'SHOP' && <ShopInventoryPage onBack={() => setCurrentTab('PLAYER')} />}
+        {currentTab === 'RANKINGS' && <LeaderboardModal isEmbedded={true} currentUser={currentUser} />}
         {currentTab === 'DOWNLOADS' && <DownloadsPage onBack={() => setCurrentTab('PLAYER')} />}
         {currentTab === 'DM' && <DMDashboard />}
       </main>
@@ -403,6 +415,15 @@ export const App: React.FC = () => {
           }`}
         >
           <UserCheck className="w-5 h-5 mb-0.5" /> Grimorio
+        </button>
+
+        <button
+          onClick={() => setCurrentTab('RANKINGS')}
+          className={`flex flex-col items-center justify-center font-cinzel text-[10px] ${
+            currentTab === 'RANKINGS' ? 'text-amber-400 font-bold' : 'text-gray-400'
+          }`}
+        >
+          <Trophy className="w-5 h-5 mb-0.5 text-amber-400" /> Rankings
         </button>
 
         {!isAppMode && (
