@@ -3,91 +3,91 @@
 @tailwind utilities;
 
 :root[data-theme="medieval"], :root:not([data-theme]) {
-  --bg-app: #050711;
-  --bg-surface: rgba(12, 16, 30, 0.85);
-  --bg-card: rgba(18, 24, 44, 0.75);
-  --border-color: rgba(0, 240, 255, 0.25);
-  --accent-primary: #00f0ff;
-  --accent-primary-hover: #38bdf8;
-  --accent-glow: rgba(0, 240, 255, 0.4);
-  --text-on-primary: #050711;
+  --bg-app: #08090f;
+  --bg-surface: rgba(18, 22, 34, 0.65);
+  --bg-card: rgba(24, 30, 46, 0.5);
+  --border-color: rgba(255, 255, 255, 0.12);
+  --accent-primary: #f59e0b;
+  --accent-primary-hover: #d97706;
+  --accent-glow: rgba(245, 158, 11, 0.25);
+  --text-on-primary: #08090f;
   --accent-magic: #a855f7;
   --accent-emerald: #10b981;
-  --accent-crimson: #ff0055;
+  --accent-crimson: #ef4444;
   --text-main: #f8fafc;
   --font-heading: 'Cinzel', serif;
-  --card-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 :root[data-theme="modern"] {
-  --bg-app: #03050c;
-  --bg-surface: rgba(10, 14, 28, 0.9);
-  --bg-card: rgba(15, 22, 42, 0.85);
-  --border-color: rgba(0, 240, 255, 0.4);
+  --bg-app: #060810;
+  --bg-surface: rgba(15, 23, 42, 0.65);
+  --bg-card: rgba(30, 41, 59, 0.45);
+  --border-color: rgba(0, 240, 255, 0.2);
   --accent-primary: #00f0ff;
   --accent-primary-hover: #38bdf8;
-  --accent-glow: rgba(0, 240, 255, 0.6);
-  --text-on-primary: #03050c;
+  --accent-glow: rgba(0, 240, 255, 0.3);
+  --text-on-primary: #060810;
   --accent-magic: #c084fc;
   --accent-emerald: #34d399;
-  --accent-crimson: #ff0055;
+  --accent-crimson: #f43f5e;
   --text-main: #ffffff;
   --font-heading: 'Cinzel', serif;
-  --card-shadow: 0 16px 48px rgba(0, 240, 255, 0.2);
+  --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
 
 :root[data-theme="arcane"] {
-  --bg-app: #090314;
-  --bg-surface: rgba(22, 10, 44, 0.9);
-  --bg-card: rgba(32, 16, 62, 0.8);
-  --border-color: rgba(168, 85, 247, 0.35);
+  --bg-app: #090412;
+  --bg-surface: rgba(30, 15, 55, 0.65);
+  --bg-card: rgba(45, 20, 80, 0.45);
+  --border-color: rgba(168, 85, 247, 0.2);
   --accent-primary: #a855f7;
   --accent-primary-hover: #9333ea;
-  --accent-glow: rgba(168, 85, 247, 0.5);
+  --accent-glow: rgba(168, 85, 247, 0.3);
   --text-on-primary: #ffffff;
   --accent-magic: #f43f5e;
   --accent-emerald: #10b981;
-  --accent-crimson: #ff0055;
+  --accent-crimson: #ef4444;
   --text-main: #f3e8ff;
   --font-heading: 'Cinzel', serif;
-  --card-shadow: 0 12px 40px rgba(168, 85, 247, 0.25);
+  --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
 
 :root[data-theme="elven"] {
-  --bg-app: #03120a;
-  --bg-surface: rgba(9, 36, 23, 0.9);
-  --bg-card: rgba(15, 53, 35, 0.8);
-  --border-color: rgba(16, 185, 129, 0.35);
+  --bg-app: #031008;
+  --bg-surface: rgba(12, 40, 25, 0.65);
+  --bg-card: rgba(20, 60, 40, 0.45);
+  --border-color: rgba(16, 185, 129, 0.2);
   --accent-primary: #10b981;
   --accent-primary-hover: #059669;
-  --accent-glow: rgba(16, 185, 129, 0.5);
-  --text-on-primary: #03120a;
+  --accent-glow: rgba(16, 185, 129, 0.3);
+  --text-on-primary: #031008;
   --accent-magic: #f59e0b;
   --accent-emerald: #34d399;
   --accent-crimson: #ef4444;
   --text-main: #ecfdf5;
   --font-heading: 'Cinzel', serif;
-  --card-shadow: 0 12px 40px rgba(16, 185, 129, 0.25);
+  --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
 
 :root[data-theme="crimson"] {
-  --bg-app: #120306;
-  --bg-surface: rgba(36, 9, 13, 0.9);
-  --bg-card: rgba(52, 15, 20, 0.8);
-  --border-color: rgba(239, 68, 68, 0.4);
-  --accent-primary: #ff0055;
+  --bg-app: #100305;
+  --bg-surface: rgba(40, 10, 15, 0.65);
+  --bg-card: rgba(60, 15, 22, 0.45);
+  --border-color: rgba(239, 68, 68, 0.2);
+  --accent-primary: #ef4444;
   --accent-primary-hover: #dc2626;
-  --accent-glow: rgba(255, 0, 85, 0.5);
+  --accent-glow: rgba(239, 68, 68, 0.3);
   --text-on-primary: #ffffff;
   --accent-magic: #f97316;
   --accent-emerald: #10b981;
   --accent-crimson: #f87171;
   --text-main: #fef2f2;
   --font-heading: 'Cinzel', serif;
-  --card-shadow: 0 12px 40px rgba(255, 0, 85, 0.3);
+  --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
 
-/* Mobile-First Base Enhancements & Safe Area Support */
+/* Clean, Dark Ambient Background */
 html, body {
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
@@ -98,58 +98,37 @@ html, body {
   background-color: var(--bg-app);
   color: var(--text-main);
   transition: background-color 0.3s ease, color 0.3s ease;
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(0, 240, 255, 0.1) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.1) 0px, transparent 50%),
-    radial-gradient(at 50% 50%, rgba(245, 158, 11, 0.05) 0px, transparent 70%);
+  background-image: radial-gradient(circle at 50% -20%, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
   background-attachment: fixed;
 }
 
-/* Background Cyber-Grid FX */
-.cyber-scanlines {
-  background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%, 
-    rgba(0, 240, 255, 0.03) 50%
-  ), linear-gradient(
-    90deg,
-    rgba(255, 0, 85, 0.02),
-    rgba(0, 240, 255, 0.02),
-    rgba(168, 85, 247, 0.02)
-  );
-  background-size: 100% 4px, 6px 100%;
-  pointer-events: none;
-}
-
 @layer utilities {
-  /* Dynamic Theme Structural Card Utility - Glassmorphism + Cyberpunk + Flat Design */
+  /* Authentic Glassmorphism Card Utility */
   .theme-card {
     background: var(--bg-card);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     border: 1px solid var(--border-color);
-    box-shadow: var(--card-shadow);
-    border-radius: 1.5rem;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.1), var(--card-shadow);
+    border-radius: 1.25rem;
+    transition: all 0.2s ease-in-out;
   }
 
   .theme-card:hover {
-    border-color: var(--accent-primary);
-    box-shadow: 0 16px 48px var(--accent-glow);
+    border-color: rgba(255, 255, 255, 0.25);
   }
 
-  /* Structural Primary Button Utility */
+  /* Clean Flat Primary Glass Button Utility */
   .theme-btn-primary {
-    @apply w-full min-h-[48px] font-extrabold py-3 px-4 active:scale-95 transition-all text-sm flex items-center justify-center gap-2 uppercase tracking-wider select-none cursor-pointer rounded-2xl;
-    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary-hover) 100%);
+    @apply w-full min-h-[46px] font-extrabold py-2.5 px-4 active:scale-95 transition-all text-xs flex items-center justify-center gap-2 uppercase tracking-wider select-none cursor-pointer rounded-xl;
+    background: var(--accent-primary);
     color: var(--text-on-primary);
-    box-shadow: 0 0 25px var(--accent-glow);
     font-family: var(--font-heading);
-    letter-spacing: 0.1em;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
   }
 
   .theme-btn-primary:hover {
-    box-shadow: 0 0 35px var(--accent-glow);
-    transform: translateY(-1px);
+    opacity: 0.95;
   }
 
   .btn-mobile-primary {
@@ -157,37 +136,16 @@ html, body {
   }
 
   .btn-mobile-secondary {
-    @apply w-full min-h-[48px] text-white border font-bold py-3 px-4 rounded-2xl active:scale-95 transition-all text-xs flex items-center justify-center gap-2 select-none cursor-pointer backdrop-blur-md;
-    background-color: var(--bg-card);
+    @apply w-full min-h-[46px] text-white border font-bold py-2.5 px-4 rounded-xl active:scale-95 transition-all text-xs flex items-center justify-center gap-2 select-none cursor-pointer backdrop-blur-md;
+    background: var(--bg-card);
     border-color: var(--border-color);
     font-family: var(--font-heading);
   }
 
   .pwa-install-card {
-    @apply rounded-3xl p-5 transition-all backdrop-blur-xl;
-    background: linear-gradient(135deg, rgba(0, 240, 255, 0.12) 0%, var(--bg-card) 100%);
-    border: 2px solid var(--accent-primary);
-    box-shadow: 0 0 35px var(--accent-glow);
+    @apply rounded-2xl p-4 transition-all backdrop-blur-xl;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.1), var(--card-shadow);
   }
-}
-
-@keyframes d20Pulse {
-  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 15px var(--accent-glow)); }
-  50% { transform: scale(1.08); filter: drop-shadow(0 0 45px var(--accent-glow)); }
-}
-
-.d20-animate {
-  animation: d20Pulse 3s ease-in-out infinite;
-}
-
-@keyframes rollShake {
-  0% { transform: rotate(0deg) scale(1); }
-  25% { transform: rotate(-15deg) scale(1.15); }
-  50% { transform: rotate(15deg) scale(1.2); }
-  75% { transform: rotate(-10deg) scale(1.1); }
-  100% { transform: rotate(0deg) scale(1); }
-}
-
-.roll-animating {
-  animation: rollShake 0.4s ease-in-out infinite;
 }
