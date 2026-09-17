@@ -1,0 +1,30 @@
+{
+  "max_refinement_level": 15,
+  "refinement_levels": {
+    "1": { "success_rate_pct": 100, "destroy_on_fail": false, "gold_cost": 50, "bonus_stat_pct": 5 },
+    "2": { "success_rate_pct": 95, "destroy_on_fail": false, "gold_cost": 100, "bonus_stat_pct": 10 },
+    "3": { "success_rate_pct": 90, "destroy_on_fail": false, "gold_cost": 200, "bonus_stat_pct": 16 },
+    "4": { "success_rate_pct": 85, "destroy_on_fail": false, "gold_cost": 350, "bonus_stat_pct": 23 },
+    "5": { "success_rate_pct": 80, "destroy_on_fail": false, "gold_cost": 550, "bonus_stat_pct": 31 },
+    "6": { "success_rate_pct": 70, "destroy_on_fail": false, "gold_cost": 850, "bonus_stat_pct": 40 },
+    "7": { "success_rate_pct": 60, "destroy_on_fail": false, "gold_cost": 1300, "bonus_stat_pct": 50 },
+    "8": { "success_rate_pct": 50, "destroy_on_fail": false, "gold_cost": 2000, "bonus_stat_pct": 62 },
+    "9": { "success_rate_pct": 40, "destroy_on_fail": false, "gold_cost": 3200, "bonus_stat_pct": 75 },
+    "10": { "success_rate_pct": 30, "destroy_on_fail": true, "gold_cost": 5000, "bonus_stat_pct": 90 },
+    "11": { "success_rate_pct": 25, "destroy_on_fail": true, "gold_cost": 8000, "bonus_stat_pct": 108 },
+    "12": { "success_rate_pct": 20, "destroy_on_fail": true, "gold_cost": 13000, "bonus_stat_pct": 130 },
+    "13": { "success_rate_pct": 15, "destroy_on_fail": true, "gold_cost": 22000, "bonus_stat_pct": 155 },
+    "14": { "success_rate_pct": 10, "destroy_on_fail": true, "gold_cost": 38000, "bonus_stat_pct": 185 },
+    "15": { "success_rate_pct": 5, "destroy_on_fail": true, "gold_cost": 75000, "bonus_stat_pct": 225 }
+  },
+  "scrapping": {
+    "fragments_per_rarity": {
+      "COMMON": 1,
+      "UNCOMMON": 3,
+      "RARE": 8,
+      "EPIC": 20,
+      "LEGENDARY": 50,
+      "MYTHIC": 120
+    }
+  }
+}

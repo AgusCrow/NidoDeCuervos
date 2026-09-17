@@ -1,0 +1,68 @@
+{
+  "point_buy": {
+    "total_starting_points": 20,
+    "attribute_min": 8,
+    "attribute_max": 18,
+    "cost_per_point_up_to_14": 1,
+    "cost_per_point_above_14": 2
+  },
+  "classes": {
+    "WARRIOR": {
+      "name": "Guerrero",
+      "icon": "🛡️",
+      "base_hp": 120,
+      "hp_per_level": 18,
+      "base_attributes": { "str": 14, "dex": 10, "int": 8, "con": 14 },
+      "primary_attribute": "str",
+      "special_passive": {
+        "id": "iron_bastion",
+        "name": "Bastión Férreo",
+        "description": "Gana automáticamente todos los empates en duelos PvP e incrementa el empuje en Guerra de Clanes en +20%."
+      }
+    },
+    "MAGE": {
+      "name": "Mago",
+      "icon": "🧙‍♂️",
+      "base_hp": 85,
+      "hp_per_level": 10,
+      "base_attributes": { "str": 8, "dex": 10, "int": 16, "con": 10 },
+      "primary_attribute": "int",
+      "special_passive": {
+        "id": "arcane_surge",
+        "name": "Sobrecarga Arcana",
+        "description": "Si pierde una ronda de combate, su siguiente ataque inflige un +50% de daño destructivo garantizado."
+      }
+    },
+    "ROGUE": {
+      "name": "Pícaro",
+      "icon": "🗡️",
+      "base_hp": 95,
+      "hp_per_level": 12,
+      "base_attributes": { "str": 10, "dex": 16, "int": 10, "con": 10 },
+      "primary_attribute": "dex",
+      "special_passive": {
+        "id": "shadow_strike",
+        "name": "Golpe Sombrío",
+        "description": "Cualquier tirada de dado d20 mayor o igual a 18 se convierte en un K.O. instantáneo en la ronda."
+      }
+    },
+    "BARD": {
+      "name": "Bardo",
+      "icon": "🎼",
+      "base_hp": 100,
+      "hp_per_level": 14,
+      "base_attributes": { "str": 10, "dex": 12, "int": 12, "con": 12 },
+      "primary_attribute": "dex",
+      "special_passive": {
+        "id": "fortune_melody",
+        "name": "Cántico de la Fortuna",
+        "description": "Saquea un +50% de oro adicional en todas las victorias y otorga un +10% de bono de botín a los miembros de su clan."
+      }
+    }
+  },
+  "level_curve": {
+    "base_xp": 100,
+    "xp_growth_exponent": 1.45,
+    "max_level": 100
+  }
+}

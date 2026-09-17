@@ -1,0 +1,22 @@
+{
+  "pvp": {
+    "dice_sides": 20,
+    "best_of_rounds": 3,
+    "stat_scaling": {
+      "str_damage_weight": 0.5,
+      "dex_crit_weight": 0.4,
+      "int_magic_weight": 0.5,
+      "con_hp_weight": 1.2
+    },
+    "critical_threshold": 20,
+    "fumble_threshold": 1,
+    "rogue_ko_threshold": 18,
+    "mage_surge_multiplier": 1.5,
+    "warrior_draw_breaker": true
+  },
+  "modifiers": {
+    "weather_bonus_roll": 2,
+    "streak_bonus_per_day": 0.05,
+    "max_streak_bonus": 0.5
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "raid_bosses": {
+    "volcanic_colossus": {
+      "name": "Ignis el Coloso Ígneo",
+      "title": "Azote de las Profundidades",
+      "element": "FIRE",
+      "base_max_hp": 500000,
+      "assault_duration_seconds": 180,
+      "rotation_interval_hours": 4,
+      "fixed_materials_drop": [
+        { "id": "mat_ignis_core", "name": "Núcleo de Obsidiana Ígnea", "min": 2, "max": 4 },
+        { "id": "mat_fire_essence", "name": "Esencia de Fuego Primordial", "min": 5, "max": 10 }
+      ],
+      "enrage_threshold_pct": 25,
+      "enrage_damage_multiplier": 2.0,
+      "milestone_rewards": {
+        "75": { "xp": 250, "gold": 150 },
+        "50": { "xp": 500, "gold": 300, "random_item_rarity": "RARE" },
+        "25": { "xp": 1000, "gold": 600, "random_item_rarity": "EPIC" },
+        "0": { "xp": 3000, "gold": 2000, "random_item_rarity": "LEGENDARY" }
+      }
+    },
+    "frost_titan": {
+      "name": "Ymir el Titán de Escarcha",
+      "title": "Señor de los Picos Helados",
+      "element": "ICE",
+      "base_max_hp": 850000,
+      "assault_duration_seconds": 180,
+      "rotation_interval_hours": 4,
+      "fixed_materials_drop": [
+        { "id": "mat_ymir_crystal", "name": "Cristal Glaciar Imperecedero", "min": 2, "max": 5 },
+        { "id": "mat_frost_essence", "name": "Esencia de Hielo Puro", "min": 8, "max": 15 }
+      ],
+      "enrage_threshold_pct": 20,
+      "enrage_damage_multiplier": 2.5,
+      "milestone_rewards": {
+        "75": { "xp": 400, "gold": 250 },
+        "50": { "xp": 800, "gold": 500, "random_item_rarity": "EPIC" },
+        "25": { "xp": 1800, "gold": 1000, "random_item_rarity": "LEGENDARY" },
+        "0": { "xp": 5000, "gold": 3500, "random_item_rarity": "MYTHIC" }
+      }
+    }
+  }
+}

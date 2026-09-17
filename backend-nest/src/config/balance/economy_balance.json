@@ -1,0 +1,24 @@
+{
+  "currency": {
+    "max_gold_capacity": 1000000000,
+    "starting_gold": 50,
+    "daily_medal_base_gold": 50,
+    "daily_medal_streak_gold_step": 15
+  },
+  "territories": {
+    "ter_01": { "name": "El Trono de la Gran Barra", "daily_gold_payout": 180, "defense_max": 200 },
+    "ter_02": { "name": "La Forja Ancestral de las Brasas", "daily_gold_payout": 150, "defense_max": 250 },
+    "ter_03": { "name": "El Sagrario del Gran Roble", "daily_gold_payout": 220, "defense_max": 300 },
+    "ter_04": { "name": "La Atalaya de los Vientos", "daily_gold_payout": 160, "defense_max": 220 }
+  },
+  "market": {
+    "tax_rate_pct": 5.0,
+    "min_listing_price": 10,
+    "max_listing_price": 50000000
+  },
+  "infinite_journey": {
+    "gold_per_monster_base": 8,
+    "xp_per_monster_base": 15,
+    "max_accumulated_hours": 12
+  }
+}

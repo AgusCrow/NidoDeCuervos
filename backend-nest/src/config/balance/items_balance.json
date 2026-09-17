@@ -1,0 +1,92 @@
+{
+  "rarity_tiers": {
+    "COMMON": {
+      "display_name": "Común",
+      "color": "#9ca3af",
+      "attack_range": [3, 8],
+      "defense_range": [1, 5],
+      "affix_count": 0,
+      "gold_multiplier": 1.0
+    },
+    "UNCOMMON": {
+      "display_name": "Poco Común",
+      "color": "#22c55e",
+      "attack_range": [9, 16],
+      "defense_range": [6, 12],
+      "affix_count": 1,
+      "gold_multiplier": 2.2
+    },
+    "RARE": {
+      "display_name": "Raro",
+      "color": "#3b82f6",
+      "attack_range": [17, 28],
+      "defense_range": [13, 22],
+      "affix_count": 2,
+      "gold_multiplier": 5.0
+    },
+    "EPIC": {
+      "display_name": "Épico",
+      "color": "#a855f7",
+      "attack_range": [29, 45],
+      "defense_range": [23, 36],
+      "affix_count": 3,
+      "gold_multiplier": 12.0
+    },
+    "LEGENDARY": {
+      "display_name": "Legendario",
+      "color": "#f59e0b",
+      "attack_range": [46, 70],
+      "defense_range": [37, 55],
+      "affix_count": 4,
+      "gold_multiplier": 30.0
+    },
+    "MYTHIC": {
+      "display_name": "Mítico",
+      "color": "#ef4444",
+      "attack_range": [71, 105],
+      "defense_range": [56, 80],
+      "affix_count": 5,
+      "gold_multiplier": 75.0
+    },
+    "ANCIENT": {
+      "display_name": "Ancestral",
+      "color": "#ec4899",
+      "attack_range": [106, 150],
+      "defense_range": [81, 115],
+      "affix_count": 6,
+      "gold_multiplier": 200.0
+    },
+    "DIVINE": {
+      "display_name": "Divino",
+      "color": "#06b6d4",
+      "attack_range": [151, 210],
+      "defense_range": [116, 160],
+      "affix_count": 6,
+      "gold_multiplier": 500.0
+    },
+    "CELESTIAL": {
+      "display_name": "Celestial",
+      "color": "#8b5cf6",
+      "attack_range": [211, 290],
+      "defense_range": [161, 220],
+      "affix_count": 7,
+      "gold_multiplier": 1200.0
+    },
+    "ETERNAL": {
+      "display_name": "Eterno",
+      "color": "#e0e7ff",
+      "attack_range": [291, 390],
+      "defense_range": [221, 300],
+      "affix_count": 7,
+      "gold_multiplier": 3000.0
+    },
+    "PRIMORDIAL": {
+      "display_name": "Primordial",
+      "color": "#facc15",
+      "attack_range": [391, 550],
+      "defense_range": [301, 420],
+      "affix_count": 8,
+      "gold_multiplier": 10000.0
+    }
+  }
+}
