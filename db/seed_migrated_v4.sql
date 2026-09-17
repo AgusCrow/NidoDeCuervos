@@ -92,7 +92,7 @@ INSERT INTO users (id, username, password_hash, role, created_at)
 VALUES ('usr_usr_e3be0928', 'valkyrie_hero', 'plain:passValkyrie99', 'USER', '2026-09-04T22:19:28.503Z')
 ON CONFLICT (id) DO NOTHING;
 INSERT INTO characters (id, user_id, name, class_id, level, xp, gold, gems, equipped_title, streak_days, nat20_streak, pvp_wins, pvp_losses, created_at)
-VALUES ('usr_e3be0928', 'usr_usr_e3be0928', 'Valquiria de las Sombras', 'ROGUE', 1, 15, 55, 0, 'Alma de la Fiesta', 1, 0, 0, 0, '2026-09-04T22:19:28.503Z')
+VALUES ('usr_e3be0928', 'usr_usr_e3be0928', 'Valquiria de las Sombras (Heroica)', 'ROGUE', 1, 15, 55, 0, 'Alma de la Fiesta', 1, 0, 0, 0, '2026-09-04T22:19:28.503Z')
 ON CONFLICT (id) DO NOTHING;
 INSERT INTO character_stats (character_id, strength, agility, intelligence, constitution, luck, stat_points_available)
 VALUES ('usr_e3be0928', 7, 15, 8, 7, 12, 0)

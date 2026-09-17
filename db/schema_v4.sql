@@ -299,3 +299,124 @@ CREATE INDEX IF NOT EXISTS idx_inventory_character ON inventory_items(character_
 CREATE INDEX IF NOT EXISTS idx_clan_members_clan ON clan_members(clan_id);
 CREATE INDEX IF NOT EXISTS idx_market_status ON market_listings(status, created_at DESC);
 CREATE INDEX IF NOT EXISTS idx_tavern_posts_created ON tavern_posts(created_at DESC);
+
+-- 19. NESTJS TYPEORM UNIFIED TABLES
+CREATE TABLE IF NOT EXISTS players (
+    id VARCHAR(64) PRIMARY KEY,
+    nfc_uid VARCHAR(64) UNIQUE,
+    name VARCHAR(100) NOT NULL,
+    username VARCHAR(64) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    secret_class VARCHAR(32) NOT NULL,
+    role VARCHAR(32) NOT NULL DEFAULT 'PLAYER',
+    stat_str INT NOT NULL DEFAULT 10,
+    stat_dex INT NOT NULL DEFAULT 10,
+    stat_int INT NOT NULL DEFAULT 10,
+    stat_con INT NOT NULL DEFAULT 10,
+    avatar_url VARCHAR(255),
+    xp BIGINT NOT NULL DEFAULT 0,
+    gold BIGINT NOT NULL DEFAULT 50,
+    level INT NOT NULL DEFAULT 1,
+    private_token VARCHAR(128) UNIQUE NOT NULL,
+    streak_days INT NOT NULL DEFAULT 0,
+    last_daily_claim_at TIMESTAMPTZ,
+    pvp_wins INT NOT NULL DEFAULT 0,
+    pvp_losses INT NOT NULL DEFAULT 0,
+    equipped_title VARCHAR(128),
+    telegram_id VARCHAR(64),
+    duel_disabled_until TIMESTAMPTZ,
+    last_scanned_at TIMESTAMPTZ,
+    gens_faction VARCHAR(32),
+    gens_contribution_points BIGINT NOT NULL DEFAULT 0,
+    gens_rank VARCHAR(64) NOT NULL DEFAULT 'Recluta',
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS inventory (
+    id VARCHAR(64) PRIMARY KEY,
+    player_id VARCHAR(64) NOT NULL,
+    item_id VARCHAR(64) NOT NULL,
+    is_equipped BOOLEAN NOT NULL DEFAULT false,
+    slot_equipped VARCHAR(32),
+    acquired_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS player_talents (
+    id VARCHAR(64) PRIMARY KEY,
+    player_id VARCHAR(64) NOT NULL,
+    node_id VARCHAR(64) NOT NULL,
+    points_invested INT NOT NULL DEFAULT 0,
+    unlocked_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS tavern_shouts (
+    id VARCHAR(64) PRIMARY KEY,
+    player_id VARCHAR(64) NOT NULL,
+    player_name VARCHAR(100) NOT NULL,
+    secret_class VARCHAR(32) NOT NULL,
+    title VARCHAR(128),
+    message TEXT NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS transmute_logs (
+    id VARCHAR(64) PRIMARY KEY,
+    player_id VARCHAR(64) NOT NULL,
+    consumed_item_ids JSONB NOT NULL DEFAULT '[]'::jsonb,
+    result_item_id VARCHAR(64) NOT NULL,
+    result_rarity VARCHAR(32) NOT NULL,
+    was_critical_double_jump BOOLEAN NOT NULL DEFAULT false,
+    gold_spent BIGINT NOT NULL DEFAULT 0,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS dm_balance_audit_logs (
+    id VARCHAR(64) PRIMARY KEY,
+    dm_user_id VARCHAR(64) NOT NULL,
+    section_modified VARCHAR(64) NOT NULL,
+    previous_values JSONB NOT NULL DEFAULT '{}'::jsonb,
+    new_values JSONB NOT NULL DEFAULT '{}'::jsonb,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS raid_boss (
+    id VARCHAR(64) PRIMARY KEY,
+    name VARCHAR(128) NOT NULL,
+    title VARCHAR(128) NOT NULL,
+    current_hp BIGINT NOT NULL,
+    max_hp BIGINT NOT NULL,
+    tier VARCHAR(32) NOT NULL DEFAULT 'MYTHIC',
+    phase INT NOT NULL DEFAULT 1,
+    element VARCHAR(32) NOT NULL DEFAULT 'FIRE',
+    is_active BOOLEAN NOT NULL DEFAULT true,
+    milestones_achieved JSONB NOT NULL DEFAULT '[]'::jsonb,
+    started_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    ends_at TIMESTAMPTZ
+);
+
+CREATE TABLE IF NOT EXISTS raid_contributions (
+    id VARCHAR(64) PRIMARY KEY,
+    raid_id VARCHAR(64) NOT NULL,
+    player_id VARCHAR(64) NOT NULL,
+    player_name VARCHAR(100) NOT NULL,
+    damage_dealt BIGINT NOT NULL DEFAULT 0,
+    last_attack_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS journey_progress (
+    player_id VARCHAR(64) PRIMARY KEY,
+    biome_id VARCHAR(64) NOT NULL DEFAULT 'bosque_sombras',
+    wave_depth INT NOT NULL DEFAULT 1,
+    current_monster_index INT NOT NULL DEFAULT 0,
+    monster_current_hp INT NOT NULL DEFAULT 100,
+    monster_max_hp INT NOT NULL DEFAULT 100,
+    monster_name VARCHAR(100) NOT NULL DEFAULT 'Lobo Sombrío',
+    monster_icon VARCHAR(32) NOT NULL DEFAULT '🐺',
+    total_monsters_slain INT NOT NULL DEFAULT 0,
+    accumulated_gold BIGINT NOT NULL DEFAULT 0,
+    accumulated_xp BIGINT NOT NULL DEFAULT 0,
+    accumulated_items JSONB NOT NULL DEFAULT '[]'::jsonb,
+    last_tick_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
