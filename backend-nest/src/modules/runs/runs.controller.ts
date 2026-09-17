@@ -5,23 +5,25 @@ import { RunsService } from './runs.service';
 export class RunsController {
   constructor(private readonly runsService: RunsService) {}
 
-  // Senda Infinita
+  // ==========================================
+  // 1. SENDA INFINITA UNIFICADA
+  // ==========================================
   @Get('journey/state')
   async getJourneyState(@Req() req: any) {
     const playerId = req.user?.id || 'usr_kaelen';
     return { status: 'success', data: await this.runsService.getJourneyState(playerId) };
   }
 
-  @Post('journey/tick')
-  async tickJourney(@Req() req: any) {
+  @Post('journey/start')
+  async startJourney(@Req() req: any, @Body() body: { zoneId: string; difficultyId: string }) {
     const playerId = req.user?.id || 'usr_kaelen';
-    return { status: 'success', data: await this.runsService.tickJourney(playerId) };
+    return await this.runsService.startJourney(playerId, body.zoneId, body.difficultyId);
   }
 
-  @Post('journey/select-biome')
-  async selectBiome(@Req() req: any, @Body() body: { biomeId: string }) {
+  @Post('journey/claim')
+  async claimJourney(@Req() req: any) {
     const playerId = req.user?.id || 'usr_kaelen';
-    return await this.runsService.selectBiome(playerId, body.biomeId || 'bosque_sombras');
+    return await this.runsService.claimJourney(playerId);
   }
 
   @Post('journey/claim-afk')
@@ -30,35 +32,74 @@ export class RunsController {
     return await this.runsService.claimAfk(playerId);
   }
 
-  // Catacumbas
-  @Post('catacombs/wave')
-  async runCatacombs(@Req() req: any, @Body() body: { floor?: number }) {
+  // ==========================================
+  // 2. EXPEDICIONES DE GREMIO (12h, 24h, 48h)
+  // ==========================================
+  @Get('guild-expeditions')
+  async getGuildExpeditions(@Req() req: any) {
     const playerId = req.user?.id || 'usr_kaelen';
-    return { status: 'success', data: await this.runsService.runCatacombsWave(playerId, body.floor || 1) };
+    return { status: 'success', data: await this.runsService.getGuildExpeditionsState(playerId) };
   }
 
-  // Expediciones
-  @Get('expeditions')
-  async getExpeditions() {
-    return { status: 'success', data: this.runsService.getExpeditionsList() };
-  }
-
-  @Post('expeditions/claim/:id')
-  async claimExpedition(@Req() req: any, @Param('id') expId: string) {
+  @Post('guild-expeditions/start')
+  async startGuildExpedition(@Req() req: any, @Body() body: { expeditionId: string }) {
     const playerId = req.user?.id || 'usr_kaelen';
-    return await this.runsService.claimExpeditionReward(playerId, expId);
+    return await this.runsService.startGuildExpedition(playerId, body.expeditionId);
   }
 
-  // Colosos / Raid
-  @Get('raid/boss')
-  async getRaidBoss() {
-    return { status: 'success', data: await this.runsService.getRaidBossState() };
+  @Post('guild-expeditions/claim')
+  async claimGuildExpedition(@Req() req: any) {
+    const playerId = req.user?.id || 'usr_kaelen';
+    return await this.runsService.claimGuildExpedition(playerId);
+  }
+
+  // ==========================================
+  // 3. COLOSOS MUNDIALES (CHAOS CASTLE SALAS 1-5)
+  // ==========================================
+  @Get('raid/rooms')
+  async getRaidRooms(@Req() req: any) {
+    const playerId = req.user?.id || 'usr_kaelen';
+    return { status: 'success', data: await this.runsService.getChaosCastleRooms(playerId) };
+  }
+
+  @Post('raid/join')
+  async joinRaidRoom(@Req() req: any, @Body() body: { roomId: string }) {
+    const playerId = req.user?.id || 'usr_kaelen';
+    return await this.runsService.joinRaidRoom(playerId, body.roomId);
   }
 
   @Post('raid/attack')
-  async attackRaidBoss(@Req() req: any) {
+  async attackRaidRoom(@Req() req: any, @Body() body: { roomId?: string }) {
     const playerId = req.user?.id || 'usr_kaelen';
-    const playerName = req.user?.name || 'Kaelen el Pícaro';
-    return await this.runsService.attackRaidBoss(playerId, playerName);
+    const roomId = body.roomId || 'cc_room_1';
+    return await this.runsService.attackChaosCastleBoss(playerId, roomId);
+  }
+
+  @Post('raid/claim')
+  async claimRaidReward(@Req() req: any, @Body() body: { roomId?: string }) {
+    const playerId = req.user?.id || 'usr_kaelen';
+    const roomId = body.roomId || 'cc_room_1';
+    return await this.runsService.claimRaidReward(playerId, roomId);
+  }
+
+  // ==========================================
+  // RETROCOMPATIBILIDAD
+  // ==========================================
+  @Get('raid/boss')
+  async getRaidBoss(@Req() req: any) {
+    const playerId = req.user?.id || 'usr_kaelen';
+    return { status: 'success', data: await this.runsService.getChaosCastleRooms(playerId) };
+  }
+
+  @Get('expeditions')
+  async getExpeditions(@Req() req: any) {
+    const playerId = req.user?.id || 'usr_kaelen';
+    return { status: 'success', data: await this.runsService.getGuildExpeditionsState(playerId) };
+  }
+
+  @Post('catacombs/wave')
+  async runCatacombs(@Req() req: any) {
+    const playerId = req.user?.id || 'usr_kaelen';
+    return { status: 'success', data: await this.runsService.getJourneyState(playerId) };
   }
 }
