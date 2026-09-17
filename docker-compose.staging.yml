@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  gremio_postgres_staging:
+    image: postgres:16-alpine
+    container_name: gremio_postgres_staging
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: nido_cuervos_db
+      POSTGRES_USER: cuervo_admin
+      POSTGRES_PASSWORD: cuervo_password_2026
+    ports:
+      - "5433:5432"
+    volumes:
+      - gremio_postgres_staging_data:/var/lib/postgresql/data
+      - ./db/schema_v4.sql:/docker-entrypoint-initdb.d/01_init.sql:ro
+      - ./db/seed_migrated_v4.sql:/docker-entrypoint-initdb.d/02_seed.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cuervo_admin -d nido_cuervos_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - nido_staging_network
+
+  gremio_nest_api_staging:
+    build:
+      context: ./backend-nest
+      dockerfile: Dockerfile
+    container_name: gremio_nest_api_staging
+    restart: unless-stopped
+    ports:
+      - "3005:3000"
+    environment:
+      PORT: 3000
+      DATABASE_URL: postgresql://cuervo_admin:cuervo_password_2026@gremio_postgres_staging:5432/nido_cuervos_db
+      JWT_SECRET: nido_cuervos_jwt_staging_key_2026
+      NODE_ENV: staging
+    depends_on:
+      gremio_postgres_staging:
+        condition: service_healthy
+    networks:
+      - nido_staging_network
+
+  gremio_angular_staging:
+    build:
+      context: ./frontend-angular
+      dockerfile: Dockerfile
+    container_name: gremio_angular_staging
+    restart: unless-stopped
+    ports:
+      - "8085:80"
+    depends_on:
+      - gremio_nest_api_staging
+    networks:
+      - nido_staging_network
+
+volumes:
+  gremio_postgres_staging_data:
+
+networks:
+  nido_staging_network:
+    driver: bridge

@@ -1,0 +1,69 @@
+{
+  "fusion_rules": {
+    "items_required": 9,
+    "gold_cost_multiplier": 50,
+    "rarity_tiers": [
+      "COMMON",
+      "UNCOMMON",
+      "RARE",
+      "EPIC",
+      "LEGENDARY",
+      "MYTHIC",
+      "ANCIENT",
+      "DIVINE",
+      "CELESTIAL",
+      "ETERNAL",
+      "PRIMORDIAL"
+    ],
+    "rates": {
+      "COMMON": {
+        "gold_cost": 100,
+        "success_rate": 0.90,
+        "double_jump_rate": 0.10,
+        "fail_retention_rate": 0.00
+      },
+      "UNCOMMON": {
+        "gold_cost": 250,
+        "success_rate": 0.85,
+        "double_jump_rate": 0.15,
+        "fail_retention_rate": 0.00
+      },
+      "RARE": {
+        "gold_cost": 600,
+        "success_rate": 0.80,
+        "double_jump_rate": 0.12,
+        "fail_retention_rate": 0.08
+      },
+      "EPIC": {
+        "gold_cost": 1500,
+        "success_rate": 0.70,
+        "double_jump_rate": 0.05,
+        "fail_retention_rate": 0.25
+      },
+      "LEGENDARY": {
+        "gold_cost": 4000,
+        "success_rate": 0.50,
+        "double_jump_rate": 0.00,
+        "fail_retention_rate": 0.50
+      },
+      "MYTHIC": {
+        "gold_cost": 10000,
+        "success_rate": 0.40,
+        "double_jump_rate": 0.00,
+        "fail_retention_rate": 0.60
+      },
+      "ANCIENT": {
+        "gold_cost": 25000,
+        "success_rate": 0.30,
+        "double_jump_rate": 0.00,
+        "fail_retention_rate": 0.70
+      },
+      "DIVINE": {
+        "gold_cost": 60000,
+        "success_rate": 0.20,
+        "double_jump_rate": 0.00,
+        "fail_retention_rate": 0.80
+      }
+    }
+  }
+}

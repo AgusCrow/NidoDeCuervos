@@ -1,0 +1,33 @@
+{
+  "refine_rules": {
+    "max_level": 15,
+    "rates": {
+      "1": { "success_pct": 100, "gold_cost": 50, "break_risk_pct": 0, "downgrade_pct": 0, "stat_multiplier": 1.05 },
+      "2": { "success_pct": 100, "gold_cost": 100, "break_risk_pct": 0, "downgrade_pct": 0, "stat_multiplier": 1.10 },
+      "3": { "success_pct": 95, "gold_cost": 180, "break_risk_pct": 0, "downgrade_pct": 0, "stat_multiplier": 1.16 },
+      "4": { "success_pct": 88, "gold_cost": 300, "break_risk_pct": 0, "downgrade_pct": 0, "stat_multiplier": 1.23 },
+      "5": { "success_pct": 80, "gold_cost": 450, "break_risk_pct": 0, "downgrade_pct": 0, "stat_multiplier": 1.31 },
+      "6": { "success_pct": 72, "gold_cost": 650, "break_risk_pct": 0, "downgrade_pct": 0, "stat_multiplier": 1.40 },
+      "7": { "success_pct": 60, "gold_cost": 900, "break_risk_pct": 0, "downgrade_pct": 20, "stat_multiplier": 1.50 },
+      "8": { "success_pct": 52, "gold_cost": 1300, "break_risk_pct": 0, "downgrade_pct": 30, "stat_multiplier": 1.62 },
+      "9": { "success_pct": 42, "gold_cost": 1800, "break_risk_pct": 0, "downgrade_pct": 40, "stat_multiplier": 1.76 },
+      "10": { "success_pct": 32, "gold_cost": 2500, "break_risk_pct": 10, "downgrade_pct": 50, "stat_multiplier": 1.92 },
+      "11": { "success_pct": 25, "gold_cost": 3500, "break_risk_pct": 15, "downgrade_pct": 55, "stat_multiplier": 2.10 },
+      "12": { "success_pct": 18, "gold_cost": 5000, "break_risk_pct": 20, "downgrade_pct": 60, "stat_multiplier": 2.30 },
+      "13": { "success_pct": 12, "gold_cost": 7500, "break_risk_pct": 25, "downgrade_pct": 65, "stat_multiplier": 2.55 },
+      "14": { "success_pct": 8, "gold_cost": 11000, "break_risk_pct": 30, "downgrade_pct": 70, "stat_multiplier": 2.85 },
+      "15": { "success_pct": 5, "gold_cost": 16000, "break_risk_pct": 35, "downgrade_pct": 70, "stat_multiplier": 3.25 }
+    },
+    "salvage": {
+      "gold_recovery_pct": 30,
+      "essence_per_rarity": {
+        "COMMON": { "dust": 2, "essence": 0 },
+        "UNCOMMON": { "dust": 5, "essence": 1 },
+        "RARE": { "dust": 12, "essence": 3 },
+        "EPIC": { "dust": 25, "essence": 8 },
+        "LEGENDARY": { "dust": 60, "essence": 20 },
+        "MYTHIC": { "dust": 150, "essence": 50 }
+      }
+    }
+  }
+}

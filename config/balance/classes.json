@@ -1,0 +1,104 @@
+{
+  "classes": {
+    "WARRIOR": {
+      "id": "WARRIOR",
+      "name": "Guerrero",
+      "tag": "El Baluarte de Acero",
+      "description": "Maestro del combate cuerpo a cuerpo y la armadura pesada. Posee una vitalidad indomable y una fuerza destructiva sin parangón.",
+      "icon": "⚔️",
+      "base_stats": {
+        "strength": 14,
+        "agility": 8,
+        "intelligence": 6,
+        "constitution": 12,
+        "luck": 5
+      },
+      "hp_per_constitution": 15,
+      "base_hp": 120,
+      "damage_attribute": "strength",
+      "passive": {
+        "name": "Ira de Batalla",
+        "description": "En duelos y asaltos, si su vida cae por debajo del 40%, su daño se incrementa un 25% y sus tiradas críticas obtienen +2 de bonificación.",
+        "effect_type": "LOW_HP_BERSERK",
+        "bonus_pct": 25
+      }
+    },
+    "MAGE": {
+      "id": "MAGE",
+      "name": "Mago",
+      "tag": "El Canalizador del Vórtice",
+      "description": "Erudito de las energías arcanas primordiales. Sacrifica la resistencia física para desatar cataclismos elementales capaces de pulverizar al enemigo.",
+      "icon": "🔮",
+      "base_stats": {
+        "strength": 5,
+        "agility": 7,
+        "intelligence": 15,
+        "constitution": 8,
+        "luck": 10
+      },
+      "hp_per_constitution": 10,
+      "base_hp": 85,
+      "damage_attribute": "intelligence",
+      "passive": {
+        "name": "Resonancia Arcana",
+        "description": "Cada tirada D20 mayor o igual a 15 desata una sobrecarga elemental que inflige un 30% de daño verdadero adicional que ignora armadura.",
+        "effect_type": "OVERCHARGE_CRIT",
+        "bonus_pct": 30
+      }
+    },
+    "ROGUE": {
+      "id": "ROGUE",
+      "name": "Pícaro",
+      "tag": "La Sombra Letal",
+      "description": "Especialista en emboscadas, golpes letales en puntos vitales y reflejos sobrehumanos. El oro fluye hacia sus dedos como el agua.",
+      "icon": "🗡️",
+      "base_stats": {
+        "strength": 7,
+        "agility": 15,
+        "intelligence": 8,
+        "constitution": 7,
+        "luck": 12
+      },
+      "hp_per_constitution": 11,
+      "base_hp": 95,
+      "damage_attribute": "agility",
+      "passive": {
+        "name": "Golpe Traicionero & Fortuna",
+        "description": "Probabilidad de crítico aumentada un 15%. Obtiene un 20% más de oro en todas las expediciones y asaltos.",
+        "effect_type": "CRIT_AND_GOLD",
+        "crit_bonus_pct": 15,
+        "gold_bonus_pct": 20
+      }
+    },
+    "BARD": {
+      "id": "BARD",
+      "name": "Paladín / Bardo",
+      "tag": "El Heraldo de la Aurora",
+      "description": "Guerrero devoto versado en cánticos de guerra y bendiciones defensivas. Equilibra fuerza, constitución y soporte táctico para sus aliados.",
+      "icon": "🛡️",
+      "base_stats": {
+        "strength": 10,
+        "agility": 8,
+        "intelligence": 10,
+        "constitution": 11,
+        "luck": 8
+      },
+      "hp_per_constitution": 13,
+      "base_hp": 110,
+      "damage_attribute": "strength",
+      "passive": {
+        "name": "Aura de Convicción",
+        "description": "Reduce todo el daño recibido un 15% y mitiga la pérdida de puntos en asedios territoriales y arenas.",
+        "effect_type": "DAMAGE_REDUCTION",
+        "reduction_pct": 15
+      }
+    }
+  },
+  "progression": {
+    "xp_exponent": 1.5,
+    "xp_base": 100,
+    "stat_points_per_level": 3,
+    "talent_points_per_level": 1,
+    "talent_points_start_level": 5
+  }
+}

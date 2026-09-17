@@ -1,0 +1,81 @@
+{
+  "raid_settings": {
+    "duration_seconds": 180,
+    "rotation_interval_hours": 4,
+    "stamina_max": 100,
+    "stamina_recharge_per_second": 1.5,
+    "guard_damage_reduction_pct": 70,
+    "guard_duration_seconds": 5,
+    "milestone_thresholds_pct": [75, 50, 25, 0]
+  },
+  "bosses": [
+    {
+      "id": "boss_ignis",
+      "name": "🐉 Ignis el Dragón de Obsidiana",
+      "title": "Señor de la Forja Primordial",
+      "max_hp": 80000,
+      "element": "FUEGO",
+      "level": 30,
+      "reward_gold": 500,
+      "reward_xp": 800,
+      "weakness": "HIELO / ARCANO",
+      "trait": "Furia Magmática: Cada Nat 20 del jefe quema el 10% de la energía de la incursión.",
+      "icon": "🐉",
+      "fixed_upgrade_materials": [
+        { "id": "mat_ignis_core", "name": "Núcleo de Obsidiana Ígnea", "min_drop": 2, "max_drop": 4 },
+        { "id": "mat_fire_essence", "name": "Esencia de Fuego Primordial", "min_drop": 5, "max_drop": 10 }
+      ]
+    },
+    {
+      "id": "boss_malakor",
+      "name": "💀 Malakor el Soberano de la Cripta",
+      "title": "Heraldo de la Peste Profunda",
+      "max_hp": 110000,
+      "element": "VENENO",
+      "level": 35,
+      "reward_gold": 750,
+      "reward_xp": 1100,
+      "weakness": "FUEGO / SAGRADO",
+      "trait": "Miasma Óseo: Golpes menores a 10 ven su daño reducido un 35%.",
+      "icon": "💀",
+      "fixed_upgrade_materials": [
+        { "id": "mat_malakor_bone", "name": "Fragmento de Cráneo Antiguo", "min_drop": 2, "max_drop": 4 },
+        { "id": "mat_shadow_dust", "name": "Polvo de Cripta Vil", "min_drop": 6, "max_drop": 12 }
+      ]
+    },
+    {
+      "id": "boss_ymir",
+      "name": "❄️ Ymir el Titán de la Escarcha",
+      "title": "Guardián de la Cordillera Eterna",
+      "max_hp": 150000,
+      "element": "HIELO",
+      "level": 40,
+      "reward_gold": 1000,
+      "reward_xp": 1500,
+      "weakness": "FUEGO / RAYO",
+      "trait": "Glaciación Ártica: Disminuye la velocidad de recarga de estamina un 25%.",
+      "icon": "❄️",
+      "fixed_upgrade_materials": [
+        { "id": "mat_ymir_crystal", "name": "Cristal Glaciar Imperecedero", "min_drop": 2, "max_drop": 5 },
+        { "id": "mat_frost_essence", "name": "Esencia de Hielo Puro", "min_drop": 8, "max_drop": 15 }
+      ]
+    },
+    {
+      "id": "boss_aurelius",
+      "name": "⚡ Aurelius el Titán de la Tempestad",
+      "title": "Conjurador de Truenos Ancestrales",
+      "max_hp": 190000,
+      "element": "RAYO",
+      "level": 45,
+      "reward_gold": 1400,
+      "reward_xp": 2000,
+      "weakness": "TIERRA / OBSIDIANA",
+      "trait": "Cólera de la Tormenta: Daño letal en Nat 1 si el jugador no activa la guardia.",
+      "icon": "⚡",
+      "fixed_upgrade_materials": [
+        { "id": "mat_storm_core", "name": "Núcleo de Tempestad Viva", "min_drop": 3, "max_drop": 6 },
+        { "id": "mat_lightning_spark", "name": "Chispa Celestial", "min_drop": 10, "max_drop": 20 }
+      ]
+    }
+  ]
+}

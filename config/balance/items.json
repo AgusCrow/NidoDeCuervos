@@ -1,0 +1,37 @@
+{
+  "item_types": [
+    "WEAPON",
+    "ARMOR",
+    "HELMET",
+    "BOOTS",
+    "RING",
+    "AMULET",
+    "SHIELD",
+    "CONSUMABLE"
+  ],
+  "rarity_multipliers": {
+    "COMMON": 1.0,
+    "UNCOMMON": 1.3,
+    "RARE": 1.7,
+    "EPIC": 2.3,
+    "LEGENDARY": 3.2,
+    "MYTHIC": 4.5,
+    "ANCIENT": 6.0,
+    "DIVINE": 8.0,
+    "CELESTIAL": 11.0,
+    "ETERNAL": 15.0,
+    "PRIMORDIAL": 20.0
+  },
+  "base_templates": [
+    { "id": "tpl_sword", "name": "Espada de Acero Templado", "type": "WEAPON", "base_atk": 12, "base_cost": 80 },
+    { "id": "tpl_staff", "name": "Báculo de Madera Ancestral", "type": "WEAPON", "base_atk": 14, "base_cost": 85 },
+    { "id": "tpl_daggers", "name": "Dagas Gemelas de Sombras", "type": "WEAPON", "base_atk": 11, "base_cost": 75 },
+    { "id": "tpl_hammer", "name": "Martillo de Guerra Gremial", "type": "WEAPON", "base_atk": 15, "base_cost": 90 },
+    { "id": "tpl_chest_plate", "name": "Pechera de Placas Pesadas", "type": "ARMOR", "base_def": 14, "base_cost": 95 },
+    { "id": "tpl_leather_armor", "name": "Armadura de Cuero Curtido", "type": "ARMOR", "base_def": 10, "base_cost": 70 },
+    { "id": "tpl_robe", "name": "Túnica Rúnica Bordada", "type": "ARMOR", "base_def": 8, "base_cost": 75 },
+    { "id": "tpl_shield", "name": "Escudo de Torre de Roble", "type": "SHIELD", "base_def": 12, "base_cost": 65 },
+    { "id": "tpl_ring", "name": "Anillo de Filigrana Antigua", "type": "RING", "base_atk": 4, "base_def": 4, "base_cost": 120 },
+    { "id": "tpl_amulet", "name": "Amuleto de Jade Protector", "type": "AMULET", "base_atk": 5, "base_def": 5, "base_cost": 150 }
+  ]
+}
