@@ -17,7 +17,6 @@ Los aventureros ingresan mediante sus cuentas de usuario para gestionar su inven
 ```mermaid
 graph TD
     subgraph Servicios Externos
-        WeatherAPI[Open-Meteo Weather API] -->|Datos Meteorológicos Reales| Backend
         TelegramBot[Bot Oficial de Telegram] -->|Alertas en Vivo| Backend
     end
 
@@ -208,16 +207,8 @@ El registro histórico, social y económico vivo de la taberna:
 
 #### 📺 Modo TV Pantalla Pública 24/7
 - Interfaz Full-HD diseñada para proyectores o televisores de la taberna.
-- Renderizado de clima real en pantalla mediante shaders y animaciones CSS (lluvia, tormenta eléctrica, nieve, hojas nocturnas).
+- Fondos de taberna con animaciones atmosféricas y efectos visuales medievales.
 - Podio animado de los 3 mejores aventureros y ticker en vivo de eventos mediante Server-Sent Events (SSE).
-
----
-
-#### 🌦️ Motor Meteorológico y Clima Dinámico
-- **Sincronización Meteorológica (Open-Meteo API)**: Conexión con datos meteorológicos locales en tiempo real que alteran los efectos ambientales y recompensas en el juego.
-- 🌧️ **Lluvia / Tormenta**: $+35\text{ XP}$ y $+15\text{ Oro}$ adicionales (*Aventurero Inclemente*).
-- 🌙 **Noche de Taberna (21:00 a 04:00)**: $+25\%$ de oro en todas las actividades.
-- ❄️ **Temperaturas Extremas**: Bonificación de avance doble en contratos y misiones activas.
 
 ---
 
