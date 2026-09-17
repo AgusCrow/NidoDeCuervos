@@ -1,9 +1,9 @@
 {
   "backend/package.json": {
-    "mtime": 1787836674.647045,
-    "seen": 1788632529.452289,
-    "ast_hash": "ea727d57396e93c95f74b8709007eb69",
-    "semantic_hash": "ea727d57396e93c95f74b8709007eb69"
+    "mtime": 1789596308.010542,
+    "seen": 1789596778.1294024,
+    "ast_hash": "ff9cf1241757c0d731fba61458bebbc0",
+    "semantic_hash": ""
   },
   "backend/rpg_gremio_store.json": {
     "mtime": 1788560368.5184815,
@@ -12,22 +12,22 @@
     "semantic_hash": "91f8d8540b4b0e328b008f23821ca101"
   },
   "backend/src/db.ts": {
-    "mtime": 1788643738.3705108,
-    "seen": 1788643875.444453,
-    "ast_hash": "4c3923199b5872f7ee09494bdcf5f62b",
-    "semantic_hash": "4c3923199b5872f7ee09494bdcf5f62b"
+    "mtime": 1789588535.4442816,
+    "seen": 1789596778.129617,
+    "ast_hash": "1355c17c746e7da6189410e2f533ff8b",
+    "semantic_hash": ""
   },
   "backend/src/index.ts": {
-    "mtime": 1788633289.7465951,
-    "seen": 1788633416.5696461,
-    "ast_hash": "b1548ba3a2f5d051f9d5ed64818f06f6",
-    "semantic_hash": "b1548ba3a2f5d051f9d5ed64818f06f6"
+    "mtime": 1789569683.5966585,
+    "seen": 1789596778.1296191,
+    "ast_hash": "a04955e4d020f6011aa686df29a70093",
+    "semantic_hash": ""
   },
   "backend/src/middleware/auth.ts": {
-    "mtime": 1788300360.0376892,
-    "seen": 1788632529.452289,
-    "ast_hash": "132216d870f1160e238a43c56b3b5e83",
-    "semantic_hash": "132216d870f1160e238a43c56b3b5e83"
+    "mtime": 1789531857.3731656,
+    "seen": 1789596778.1296208,
+    "ast_hash": "9f07c63fc5d650716def54b5152537d7",
+    "semantic_hash": ""
   },
   "backend/src/mqttService.ts": {
     "mtime": 1787836709.2144601,
@@ -48,10 +48,10 @@
     "semantic_hash": "9c4611be0fe9ceea7cf5a896d155a981"
   },
   "backend/src/routes/player.ts": {
-    "mtime": 1788642688.0657039,
-    "seen": 1788642939.9059513,
-    "ast_hash": "8c0864e8397e2b0b4f549eed0e1b4973",
-    "semantic_hash": "8c0864e8397e2b0b4f549eed0e1b4973"
+    "mtime": 1789579227.3262103,
+    "seen": 1789596778.13003,
+    "ast_hash": "9905d1d90f304d72fd41a641a196edfb",
+    "semantic_hash": ""
   },
   "backend/src/routes/scan.ts": {
     "mtime": 1787836712.6909604,
@@ -66,10 +66,10 @@
     "semantic_hash": "345e080670c86cd29346031a5a96c358"
   },
   "backend/src/rpgEngine.ts": {
-    "mtime": 1787860840.4697824,
-    "seen": 1788632529.452289,
-    "ast_hash": "bea48657ecf4e8c16acf414eb1a7e6a3",
-    "semantic_hash": "bea48657ecf4e8c16acf414eb1a7e6a3"
+    "mtime": 1788910046.5519533,
+    "seen": 1789596778.1302888,
+    "ast_hash": "a682de14ef7a0cf5a6824bf4b9c5bbde",
+    "semantic_hash": ""
   },
   "backend/src/sseHub.ts": {
     "mtime": 1787836686.6787918,
@@ -126,10 +126,10 @@
     "semantic_hash": "4db7cef28194d4ef5c434e73866bf418"
   },
   "frontend/package.json": {
-    "mtime": 1787836720.0752761,
-    "seen": 1788632529.452289,
-    "ast_hash": "a58684d0b72c70a7c5b1198307a4107f",
-    "semantic_hash": "a58684d0b72c70a7c5b1198307a4107f"
+    "mtime": 1789596308.0115416,
+    "seen": 1789596778.1314418,
+    "ast_hash": "4805f72ec68db5b1d7099dba54b8cd16",
+    "semantic_hash": ""
   },
   "frontend/postcss.config.js": {
     "mtime": 1787836735.395727,
@@ -144,16 +144,16 @@
     "semantic_hash": "057eef44f9bd231ee58dc3d6a54bf7b7"
   },
   "frontend/public/sw.js": {
-    "mtime": 1788568184.6470742,
-    "seen": 1788632529.452289,
-    "ast_hash": "f95613748c2dbf085f778960721699dc",
-    "semantic_hash": "f95613748c2dbf085f778960721699dc"
+    "mtime": 1789349624.7095072,
+    "seen": 1789596778.1317499,
+    "ast_hash": "ecf9eb284efa37529f7335aa6f6c9000",
+    "semantic_hash": ""
   },
   "frontend/src/App.tsx": {
-    "mtime": 1788633369.0979362,
-    "seen": 1788633416.5776465,
-    "ast_hash": "099842bef0a1679fa6bd16ba36e09872",
-    "semantic_hash": "099842bef0a1679fa6bd16ba36e09872"
+    "mtime": 1789582437.5301068,
+    "seen": 1789596778.131752,
+    "ast_hash": "411ded7bf0fa0880703cdb5456abced8",
+    "semantic_hash": ""
   },
   "frontend/src/components/AppDownloadSection.tsx": {
     "mtime": 1788203991.0274427,
@@ -174,16 +174,16 @@
     "semantic_hash": "29ad3b2c921524867c2c7c6a9fc98a14"
   },
   "frontend/src/components/ThemeSelectorModal.tsx": {
-    "mtime": 1788461030.0054119,
-    "seen": 1788632529.452289,
-    "ast_hash": "8009eb958c7ab1541a0d42123e3812a2",
-    "semantic_hash": "8009eb958c7ab1541a0d42123e3812a2"
+    "mtime": 1789586451.0669138,
+    "seen": 1789596778.13273,
+    "ast_hash": "03c71ac9a7d1236588a09b6cf40889c5",
+    "semantic_hash": ""
   },
   "frontend/src/main.tsx": {
-    "mtime": 1788199766.431565,
-    "seen": 1788632529.452289,
-    "ast_hash": "50cfc713f16cd29b0ac8030a589851e1",
-    "semantic_hash": "50cfc713f16cd29b0ac8030a589851e1"
+    "mtime": 1789349502.0083156,
+    "seen": 1789596778.1328688,
+    "ast_hash": "09fdd2c6b4f234457a9b856045276713",
+    "semantic_hash": ""
   },
   "frontend/src/pages/DMDashboard.tsx": {
     "mtime": 1788355009.8513005,
@@ -198,22 +198,22 @@
     "semantic_hash": "218d6d43c8c0ca46fc9666b0d7c23206"
   },
   "frontend/src/pages/LoginPage.tsx": {
-    "mtime": 1788463955.4390423,
-    "seen": 1788632529.452289,
-    "ast_hash": "902cb96bcfd77985535ee2dc2a1fdbc7",
-    "semantic_hash": "902cb96bcfd77985535ee2dc2a1fdbc7"
+    "mtime": 1789353824.7336323,
+    "seen": 1789596778.1331606,
+    "ast_hash": "fed9f12ffb401b6d603b9c82adf9bf12",
+    "semantic_hash": ""
   },
   "frontend/src/pages/PlayerDashboard.tsx": {
-    "mtime": 1788643764.8134997,
-    "seen": 1788643875.457957,
-    "ast_hash": "adfbf6152fec423c7d08b97ccc895e2e",
-    "semantic_hash": "adfbf6152fec423c7d08b97ccc895e2e"
+    "mtime": 1789576179.9078872,
+    "seen": 1789596778.1331627,
+    "ast_hash": "72da0cb5ab653a9b0e2c5d68c14d1acc",
+    "semantic_hash": ""
   },
   "frontend/src/pages/ShopInventoryPage.tsx": {
-    "mtime": 1788638249.8398924,
-    "seen": 1788638572.0156312,
-    "ast_hash": "ac8be3202f289c865dec45834f516197",
-    "semantic_hash": "ac8be3202f289c865dec45834f516197"
+    "mtime": 1788912212.0697818,
+    "seen": 1789596778.1331644,
+    "ast_hash": "acb843b2388728fcc188d4dedb36d1cd",
+    "semantic_hash": ""
   },
   "frontend/src/pages/TVMode.tsx": {
     "mtime": 1788639601.5585313,
@@ -222,28 +222,28 @@
     "semantic_hash": "3c6d124d7b815c97ac1a6d54f99114aa"
   },
   "frontend/src/services/api.ts": {
-    "mtime": 1788639517.8196118,
-    "seen": 1788639747.0670238,
-    "ast_hash": "ac2620ab4856b716b82e4c8ac3396c04",
-    "semantic_hash": "ac2620ab4856b716b82e4c8ac3396c04"
+    "mtime": 1789532208.8217845,
+    "seen": 1789596778.1332953,
+    "ast_hash": "bfcd7b58bbbb647ff3adee08dfcd851c",
+    "semantic_hash": ""
   },
   "frontend/src/services/sse.ts": {
-    "mtime": 1787836752.5218103,
-    "seen": 1788632529.452289,
-    "ast_hash": "fe2d1d8e1328e23a6ee0e83dde491d1e",
-    "semantic_hash": "fe2d1d8e1328e23a6ee0e83dde491d1e"
+    "mtime": 1789350149.7339375,
+    "seen": 1789596778.133299,
+    "ast_hash": "1c0afcfdf370f4a668c250432df356ac",
+    "semantic_hash": ""
   },
   "frontend/src/types.ts": {
-    "mtime": 1788639075.1844168,
-    "seen": 1788639210.0160692,
-    "ast_hash": "9d799f5bdb88d75240385ec3da2655a4",
-    "semantic_hash": "9d799f5bdb88d75240385ec3da2655a4"
+    "mtime": 1789569645.1278994,
+    "seen": 1789596778.1333008,
+    "ast_hash": "56d8326c39fac90a61e09fddd418141c",
+    "semantic_hash": ""
   },
   "frontend/tailwind.config.js": {
-    "mtime": 1788458780.2967887,
-    "seen": 1788632529.452289,
-    "ast_hash": "fabba28ad36f581c410a17b1d572d774",
-    "semantic_hash": "fabba28ad36f581c410a17b1d572d774"
+    "mtime": 1788744312.560424,
+    "seen": 1789596778.1333025,
+    "ast_hash": "3a96acc875771429d02a85b754c37e3a",
+    "semantic_hash": ""
   },
   "frontend/tsconfig.json": {
     "mtime": 1787836876.0744412,
@@ -276,10 +276,10 @@
     "semantic_hash": "44feed9a58887e647abf46ee736b7589"
   },
   "backend/src/routes/version.ts": {
-    "mtime": 1788639628.9004073,
-    "seen": 1788639747.054484,
-    "ast_hash": "7d887b7d7fba3ea8642c0ab689e7319d",
-    "semantic_hash": "7d887b7d7fba3ea8642c0ab689e7319d"
+    "mtime": 1789596308.010542,
+    "seen": 1789596778.1302874,
+    "ast_hash": "957c6b1dbe2d35cde1784b9a90cfc131",
+    "semantic_hash": ""
   },
   "frontend/src/components/UpdateNotificationModal.tsx": {
     "mtime": 1788633306.5236535,
@@ -288,28 +288,28 @@
     "semantic_hash": "cdc749367d2b4e40725a040f0365d7b6"
   },
   "frontend/src/components/D20DuelArenaModal.tsx": {
-    "mtime": 1788638135.976011,
-    "seen": 1788638572.0116334,
-    "ast_hash": "c242a3d8001ac35f7b19efeab34928ae",
-    "semantic_hash": "c242a3d8001ac35f7b19efeab34928ae"
+    "mtime": 1789529731.3100936,
+    "seen": 1789596778.13196,
+    "ast_hash": "323ed3eaecc6fa037deaeb2e5f7841fc",
+    "semantic_hash": ""
   },
   "frontend/src/components/LeaderboardModal.tsx": {
-    "mtime": 1788638150.587386,
-    "seen": 1788638572.012636,
-    "ast_hash": "17e11354a5b7e834f49dc338d4bd0de6",
-    "semantic_hash": "17e11354a5b7e834f49dc338d4bd0de6"
+    "mtime": 1789582385.3972263,
+    "seen": 1789596778.1321487,
+    "ast_hash": "fa4d08614b6a197bb0df87e51dafb99d",
+    "semantic_hash": ""
   },
   "frontend/src/services/sfx.ts": {
-    "mtime": 1788639528.7644491,
-    "seen": 1788639747.0670238,
-    "ast_hash": "a172637311c1bbd53a91ec1b0d7cc4c7",
-    "semantic_hash": "a172637311c1bbd53a91ec1b0d7cc4c7"
+    "mtime": 1788991270.4178762,
+    "seen": 1789596778.1332974,
+    "ast_hash": "082949932fe7bf0b7d768aea8853340a",
+    "semantic_hash": ""
   },
   "frontend/src/components/ClanTerritoryModal.tsx": {
-    "mtime": 1788643775.8480253,
-    "seen": 1788643875.452959,
-    "ast_hash": "373e01937defb387b1ea18eecccba444",
-    "semantic_hash": "373e01937defb387b1ea18eecccba444"
+    "mtime": 1789571741.8519344,
+    "seen": 1789596778.1319568,
+    "ast_hash": "08cb333ac900f306cb4b31987248ad7d",
+    "semantic_hash": ""
   },
   "frontend/src/components/PetsAndGamesModal.tsx": {
     "mtime": 1788639410.2844627,
@@ -318,21 +318,687 @@
     "semantic_hash": "e297b048f6dc691f93346c91960a1c3f"
   },
   "frontend/src/components/RaidBossModal.tsx": {
-    "mtime": 1788639384.5095284,
-    "seen": 1788639747.063515,
-    "ast_hash": "d38591b66dea802c50fb423fb1c33970",
-    "semantic_hash": "d38591b66dea802c50fb423fb1c33970"
+    "mtime": 1789531981.198574,
+    "seen": 1789596778.1325035,
+    "ast_hash": "cdd33113bcf73930db7a0e6e6d0b03b3",
+    "semantic_hash": ""
   },
   "frontend/src/components/TalentsAndForgeModal.tsx": {
-    "mtime": 1788639397.1494818,
-    "seen": 1788639747.063515,
-    "ast_hash": "fd00d132561e4df96db1fcf1d6d4045f",
-    "semantic_hash": "fd00d132561e4df96db1fcf1d6d4045f"
+    "mtime": 1788910333.101339,
+    "seen": 1789596778.1325119,
+    "ast_hash": "8affefc210996581cabb00d728967f81",
+    "semantic_hash": ""
   },
   "frontend/src/components/TavernWallAndMarketModal.tsx": {
     "mtime": 1788639373.257986,
     "seen": 1788639747.063515,
     "ast_hash": "431f0d50955eea6addc583e83cca4e31",
     "semantic_hash": "431f0d50955eea6addc583e83cca4e31"
+  },
+  "backend/data/rpg_gremio_store.json": {
+    "mtime": 1788910065.6645222,
+    "seen": 1789596778.1293962,
+    "ast_hash": "dd271bc324f0bad7afe30f0d5b6dfff8",
+    "semantic_hash": ""
+  },
+  "backend/src/routes/events.ts": {
+    "mtime": 1789570100.1789424,
+    "seen": 1789596778.130026,
+    "ast_hash": "4acd901bcce2b80454407ca0dfa46684",
+    "semantic_hash": ""
+  },
+  "backend/src/routes/gens.ts": {
+    "mtime": 1789570068.8714056,
+    "seen": 1789596778.1300278,
+    "ast_hash": "1eb5cc943bf5e4c66eda60b9f7c36364",
+    "semantic_hash": ""
+  },
+  "backend/src/services/forgeService.ts": {
+    "mtime": 1788909867.4565597,
+    "seen": 1789596778.1302903,
+    "ast_hash": "8ac3b8b68c091a5a76512a779954981d",
+    "semantic_hash": ""
+  },
+  "backend/src/services/goldService.ts": {
+    "mtime": 1789569608.3280191,
+    "seen": 1789596778.1302912,
+    "ast_hash": "c8ef90fdd9182d93996398991ff56286",
+    "semantic_hash": ""
+  },
+  "backend/src/services/itemGenerator.ts": {
+    "mtime": 1789569999.8263016,
+    "seen": 1789596778.1302922,
+    "ast_hash": "b8532b3ac3a742311cb86c9672941ef1",
+    "semantic_hash": ""
+  },
+  "backend/src/services/loreService.ts": {
+    "mtime": 1788921749.137406,
+    "seen": 1789596778.130293,
+    "ast_hash": "fa7a6e0e167dc0a7fb930a13dae2d0b9",
+    "semantic_hash": ""
+  },
+  "backend/src/services/questService.ts": {
+    "mtime": 1788921795.4547977,
+    "seen": 1789596778.1302943,
+    "ast_hash": "dbfa2730929456aa190eaa6e4d525449",
+    "semantic_hash": ""
+  },
+  "backend/src/services/taskbarService.ts": {
+    "mtime": 1789531067.2492902,
+    "seen": 1789596778.1302955,
+    "ast_hash": "25dff6eca54551d8f2daadb6d8d8c05c",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/AchievementsAndTitlesModal.tsx": {
+    "mtime": 1788930434.6666799,
+    "seen": 1789596778.1317537,
+    "ast_hash": "79f9f556456a12cfc058c20f867c1e81",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/CatacombsAutoBattler.tsx": {
+    "mtime": 1789530438.0288668,
+    "seen": 1789596778.131954,
+    "ast_hash": "1fc85415c7b54763d88fda741eaa505d",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/ErrorBoundary.tsx": {
+    "mtime": 1789349461.435665,
+    "seen": 1789596778.132139,
+    "ast_hash": "6f8c93fe78d3a7180ecddc87b77d40c9",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/ExpeditionsModal.tsx": {
+    "mtime": 1789530477.5820408,
+    "seen": 1789596778.1321406,
+    "ast_hash": "3121367efe3f61c535f6a49788bc866a",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/GensFactionsModal.tsx": {
+    "mtime": 1789569871.2045562,
+    "seen": 1789596778.1321418,
+    "ast_hash": "15069dee2ecf3991411888b963e90429",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/GuildQuestsModal.tsx": {
+    "mtime": 1788910106.3684921,
+    "seen": 1789596778.1321425,
+    "ast_hash": "2ceb90f611e2e2deeb6389acae12e612",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/InfiniteJourneyModal.tsx": {
+    "mtime": 1789531151.986855,
+    "seen": 1789596778.132144,
+    "ast_hash": "9328d4f5f7629957f2fccaba9f8a81f2",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/InfiniteJourneyWidget.tsx": {
+    "mtime": 1789531126.511707,
+    "seen": 1789596778.132145,
+    "ast_hash": "69a87651393bfcf63c7ff5984fadb5de",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/ItemInspectModal.tsx": {
+    "mtime": 1789528838.216674,
+    "seen": 1789596778.1321466,
+    "ast_hash": "c0919771e4a179ae74f938230c51df17",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/MUEventsModal.tsx": {
+    "mtime": 1789569887.6519244,
+    "seen": 1789596778.13215,
+    "ast_hash": "ea7b10e4139e5e9971bee0df79bf7f8c",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/PaperDollAvatar.tsx": {
+    "mtime": 1789528815.594535,
+    "seen": 1789596778.1323445,
+    "ast_hash": "6311804c2bc81241658ed6a9f276a9b9",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/ProfileSettingsModal.tsx": {
+    "mtime": 1789578621.56925,
+    "seen": 1789596778.1324992,
+    "ast_hash": "6e1d74262172be0505ecd82bd024e1a1",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/RpgToast.tsx": {
+    "mtime": 1789528793.962229,
+    "seen": 1789596778.1325066,
+    "ast_hash": "a1061c0393fe9be57754c201528970eb",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/RunicD20Die.tsx": {
+    "mtime": 1789529684.5731056,
+    "seen": 1789596778.132509,
+    "ast_hash": "2a03e45a4988dc535c998ca2ba133369",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/TaskBarHeroModal.tsx": {
+    "mtime": 1789531201.487158,
+    "seen": 1789596778.1325133,
+    "ast_hash": "fcc3285b6f05ee0e83a5caff43ec398a",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/TaskBarHeroWidget.tsx": {
+    "mtime": 1789531194.2008421,
+    "seen": 1789596778.1325305,
+    "ast_hash": "e1bde48809111f656b2eca159e6f604c",
+    "semantic_hash": ""
+  },
+  "MANUAL_GREMIO_RPG.md": {
+    "mtime": 1789604511.8229787,
+    "seen": 1789604741.9747908,
+    "ast_hash": "01de941cfd15974519fd7ed7b59a9be0",
+    "semantic_hash": ""
+  },
+  "docker-compose.yml": {
+    "mtime": 1789596308.010542,
+    "seen": 1789596778.133986,
+    "ast_hash": "5dd450b866fd9628bf3213cb2ba89859",
+    "semantic_hash": ""
+  },
+  "docker/docker-compose.yml": {
+    "mtime": 1787836804.102698,
+    "seen": 1789596778.1339874,
+    "ast_hash": "989b390aa1d714400b5ff990df8f0e17",
+    "semantic_hash": ""
+  },
+  "frontend/index.html": {
+    "mtime": 1789001885.76677,
+    "seen": 1789596778.1339886,
+    "ast_hash": "5a8491bd8ffdeb94efc60c67dd45f798",
+    "semantic_hash": ""
+  },
+  "desktop/icon.png": {
+    "mtime": 1788201691.0434637,
+    "seen": 1789596778.13399,
+    "ast_hash": "980d1acb04c076319456c6060c60772a",
+    "semantic_hash": ""
+  },
+  "frontend/public/icons/icon-192.png": {
+    "mtime": 1788199644.9951496,
+    "seen": 1789596778.1339953,
+    "ast_hash": "4ee5f6283f5f0fcac7843a7e7a8f69e7",
+    "semantic_hash": ""
+  },
+  "frontend/public/icons/icon-512.png": {
+    "mtime": 1788199645.0061638,
+    "seen": 1789596778.133997,
+    "ast_hash": "980d1acb04c076319456c6060c60772a",
+    "semantic_hash": ""
+  },
+  "frontend/public/icons/icon-maskable.png": {
+    "mtime": 1788199645.0157354,
+    "seen": 1789596778.1339982,
+    "ast_hash": "980d1acb04c076319456c6060c60772a",
+    "semantic_hash": ""
+  },
+  "mobile_build/res/drawable/icon.png": {
+    "mtime": 1788559938.318807,
+    "seen": 1789596778.1339996,
+    "ast_hash": "980d1acb04c076319456c6060c60772a",
+    "semantic_hash": ""
+  },
+  "backend-nest/nest-cli.json": {
+    "mtime": 1789648538.9452636,
+    "seen": 1789649516.5258296,
+    "ast_hash": "f9082831349958676cd9f7a2460e3c94",
+    "semantic_hash": ""
+  },
+  "backend-nest/package.json": {
+    "mtime": 1789648538.9462712,
+    "seen": 1789649516.5258346,
+    "ast_hash": "9769bb8e593f3e23c1f33b70b470279f",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/app.module.ts": {
+    "mtime": 1789648774.9258852,
+    "seen": 1789649516.5258362,
+    "ast_hash": "cb5464bfd5928d8cc6458c7261a523fe",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/config/balance/classes_balance.json": {
+    "mtime": 1789648538.948274,
+    "seen": 1789649516.525838,
+    "ast_hash": "d510cdb99f3bd2ad07da79fe579d40ad",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/config/balance/combat_balance.json": {
+    "mtime": 1789648538.9495442,
+    "seen": 1789649516.525839,
+    "ast_hash": "29cdea3b6add89a54a337edfb65c6d24",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/config/balance/economy_balance.json": {
+    "mtime": 1789648538.9495442,
+    "seen": 1789649516.5258403,
+    "ast_hash": "884cf0f3a32d85bea5cd454d1df0b218",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/config/balance/forge_balance.json": {
+    "mtime": 1789648538.9495442,
+    "seen": 1789649516.525842,
+    "ast_hash": "0bbee3649b032ca84215f3c72d74a4ee",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/config/balance/items_balance.json": {
+    "mtime": 1789648538.9505424,
+    "seen": 1789649516.5258431,
+    "ast_hash": "9f25c2033186ea719ec26921e7398bfa",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/config/balance/raid_balance.json": {
+    "mtime": 1789648652.9096613,
+    "seen": 1789649516.5258446,
+    "ast_hash": "29d6639e0227c7185058e9a0645caa8d",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/config/balance/transmute_balance.json": {
+    "mtime": 1789648643.7399023,
+    "seen": 1789649516.5258453,
+    "ast_hash": "0cf9a2f1db7ddfd48a4cf12a5ebe4aef",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/entities/clan.entity.ts": {
+    "mtime": 1789648538.952542,
+    "seen": 1789649516.5258462,
+    "ast_hash": "a1dadd3620a7a3c87c8b4b4bab6d27af",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/entities/inventory.entity.ts": {
+    "mtime": 1789648538.952542,
+    "seen": 1789649516.5258472,
+    "ast_hash": "5e9832ac3c6106aead02969166971157",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/entities/item.entity.ts": {
+    "mtime": 1789648538.952542,
+    "seen": 1789649516.5258484,
+    "ast_hash": "99c174b7d9ee08cbfa5cec1f5b3afd31",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/entities/journey-progress.entity.ts": {
+    "mtime": 1789648538.953542,
+    "seen": 1789649516.525849,
+    "ast_hash": "070a54d10b48e1206e3c4864697c82b7",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/entities/player.entity.ts": {
+    "mtime": 1789648538.953542,
+    "seen": 1789649516.52585,
+    "ast_hash": "044b40ddb60865bd19b110d13a339dc1",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/entities/raid-boss.entity.ts": {
+    "mtime": 1789648538.953542,
+    "seen": 1789649516.5258508,
+    "ast_hash": "b819f991ba5740de0a8cb7ace289a658",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/entities/talent.entity.ts": {
+    "mtime": 1789648695.7511625,
+    "seen": 1789649516.5258522,
+    "ast_hash": "4ab93ccd59cf7cab854944bbe661064c",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/entities/tavern-market.entity.ts": {
+    "mtime": 1789648737.0097468,
+    "seen": 1789649516.5258532,
+    "ast_hash": "0ca1166d8235504b0c17b6ddf245aa9a",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/entities/territory.entity.ts": {
+    "mtime": 1789648538.9545407,
+    "seen": 1789649516.5258543,
+    "ast_hash": "9dd2e9cc0beef882548d780c3e40bebf",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/entities/transmute-log.entity.ts": {
+    "mtime": 1789648538.9545407,
+    "seen": 1789649516.5258558,
+    "ast_hash": "048b1babb0d9d9ceaf0ae6689d4f4478",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/main.ts": {
+    "mtime": 1789648538.9545407,
+    "seen": 1789649516.5258567,
+    "ast_hash": "abc15b0accbbf3678c7daab4758af266",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/auth/auth.controller.ts": {
+    "mtime": 1789648538.9555416,
+    "seen": 1789649516.5258577,
+    "ast_hash": "1ce2d48dd9538ef38dc8af5a7678233f",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/auth/auth.module.ts": {
+    "mtime": 1789648538.9555416,
+    "seen": 1789649516.5258589,
+    "ast_hash": "adf7538bbbb3dd2b4de222f4bc77922d",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/auth/auth.service.ts": {
+    "mtime": 1789648538.9565425,
+    "seen": 1789649516.5258598,
+    "ast_hash": "8f0bbdde66ca8045dd229f51aacf75b5",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/auth/dto/character-create.dto.ts": {
+    "mtime": 1789648538.9565425,
+    "seen": 1789649516.5258605,
+    "ast_hash": "e0b71ebdff5dc8104c601ec2be832810",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/balance/balance.controller.ts": {
+    "mtime": 1789648538.9565425,
+    "seen": 1789649516.5258617,
+    "ast_hash": "26fb825d200b857f0e00108820960e0e",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/balance/balance.module.ts": {
+    "mtime": 1789648538.9580498,
+    "seen": 1789649516.525863,
+    "ast_hash": "d88403f47ec7d4278b4c0b6067749b51",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/balance/balance.service.ts": {
+    "mtime": 1789648538.9580498,
+    "seen": 1789649516.5258641,
+    "ast_hash": "f589dee783a8694326e5cf0c1d590b9f",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/clans/clans.controller.ts": {
+    "mtime": 1789648538.9580498,
+    "seen": 1789649516.525865,
+    "ast_hash": "3fa5b2ad1c1f0e73626e969fb02acee1",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/clans/clans.module.ts": {
+    "mtime": 1789648538.9590592,
+    "seen": 1789649516.525866,
+    "ast_hash": "851a2f6849735f40d2b662a036c3a238",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/clans/clans.service.ts": {
+    "mtime": 1789648538.9590592,
+    "seen": 1789649516.525867,
+    "ast_hash": "07a23ad5b41c528dac7254270a9ada41",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/forge/forge.controller.ts": {
+    "mtime": 1789648538.9590592,
+    "seen": 1789649516.525868,
+    "ast_hash": "6ab7868cf52d9d7441e8eb52923d8a40",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/forge/forge.module.ts": {
+    "mtime": 1789648538.9600666,
+    "seen": 1789649516.5258691,
+    "ast_hash": "215e565deb49ce9c9fcb4b759118a1ea",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/forge/transmute.service.ts": {
+    "mtime": 1789648806.3548224,
+    "seen": 1789649516.5258698,
+    "ast_hash": "7538a7afbcba4906c209fa920eb08ecd",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/player/player.controller.ts": {
+    "mtime": 1789648538.9600666,
+    "seen": 1789649516.5258708,
+    "ast_hash": "54babdce3b363cf829f8b03733be5776",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/player/player.module.ts": {
+    "mtime": 1789648538.9610648,
+    "seen": 1789649516.5258722,
+    "ast_hash": "5242dbf115a901df47e733909af0aac9",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/player/player.service.ts": {
+    "mtime": 1789648538.9610648,
+    "seen": 1789649516.525873,
+    "ast_hash": "f744f49523bb03583b508ac38b5d27ed",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/runs/runs.controller.ts": {
+    "mtime": 1789648538.962067,
+    "seen": 1789649516.525874,
+    "ast_hash": "8ee443f1bbde4578849ee34f65190b5f",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/runs/runs.module.ts": {
+    "mtime": 1789648538.962067,
+    "seen": 1789649516.5258749,
+    "ast_hash": "3b08285be9daf3f35ed9371030dbddc2",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/runs/runs.service.ts": {
+    "mtime": 1789648538.962067,
+    "seen": 1789649516.5258763,
+    "ast_hash": "e61b2d3975ee867aa2bd2fbecdc90004",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/talents/talents.controller.ts": {
+    "mtime": 1789648714.0842228,
+    "seen": 1789649516.5258772,
+    "ast_hash": "9763222bee87ce10194b5eb6a1dab0f9",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/talents/talents.module.ts": {
+    "mtime": 1789648721.8620632,
+    "seen": 1789649516.5258782,
+    "ast_hash": "defbc3a8791a22b2e7ff8c0f900314bc",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/talents/talents.service.ts": {
+    "mtime": 1789648707.181737,
+    "seen": 1789649516.5258794,
+    "ast_hash": "e68f811e1a92645075a6cc9f8aa6385e",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/tavern-market/tavern-market.controller.ts": {
+    "mtime": 1789648757.0446663,
+    "seen": 1789649516.5258803,
+    "ast_hash": "e5dcd762adef66e23523e6a9e2d2e8cd",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/tavern-market/tavern-market.module.ts": {
+    "mtime": 1789648764.080428,
+    "seen": 1789649516.5258815,
+    "ast_hash": "59e8325d0b0f4a0726076795c2d4d9a6",
+    "semantic_hash": ""
+  },
+  "backend-nest/src/modules/tavern-market/tavern-market.service.ts": {
+    "mtime": 1789648747.6314504,
+    "seen": 1789649516.5258827,
+    "ast_hash": "690c507f445637b74a3467c408047806",
+    "semantic_hash": ""
+  },
+  "backend-nest/tsconfig.json": {
+    "mtime": 1789648538.963065,
+    "seen": 1789649516.5258837,
+    "ast_hash": "9de1605a03654cf28e0115de26232641",
+    "semantic_hash": ""
+  },
+  "config/balance/bosses.json": {
+    "mtime": 1789613167.4085157,
+    "seen": 1789649516.531319,
+    "ast_hash": "ca6d5750aa01ab088ceaf9f64fe3acd3",
+    "semantic_hash": ""
+  },
+  "config/balance/classes.json": {
+    "mtime": 1789613138.1610174,
+    "seen": 1789649516.5313225,
+    "ast_hash": "fad67a6456cddacbc3d1529536a7b823",
+    "semantic_hash": ""
+  },
+  "config/balance/forge.json": {
+    "mtime": 1789613157.3898373,
+    "seen": 1789649516.5313249,
+    "ast_hash": "00f7dc4143bb1411e8803eddf1a943e7",
+    "semantic_hash": ""
+  },
+  "config/balance/fusion.json": {
+    "mtime": 1789613146.331813,
+    "seen": 1789649516.531327,
+    "ast_hash": "7960e473bcfaab36996eb02f4911d974",
+    "semantic_hash": ""
+  },
+  "config/balance/items.json": {
+    "mtime": 1789613175.4884262,
+    "seen": 1789649516.5313299,
+    "ast_hash": "a76d8a4305f4c379a1e596979ff5cd4d",
+    "semantic_hash": ""
+  },
+  "frontend-angular/angular.json": {
+    "mtime": 1789649080.205042,
+    "seen": 1789649516.5324242,
+    "ast_hash": "8d654a9a9d969eb1ab0c9094df14d5af",
+    "semantic_hash": ""
+  },
+  "frontend-angular/package.json": {
+    "mtime": 1789649080.206039,
+    "seen": 1789649516.5324275,
+    "ast_hash": "b1081f6754ae12a63dbffd508e08f074",
+    "semantic_hash": ""
+  },
+  "frontend-angular/public/manifest.json": {
+    "mtime": 1789649080.2120922,
+    "seen": 1789649516.5324306,
+    "ast_hash": "db6345c0d3fce8ae74ebadc0cf7ab3b7",
+    "semantic_hash": ""
+  },
+  "frontend-angular/public/sw.js": {
+    "mtime": 1789649080.2130916,
+    "seen": 1789649516.532433,
+    "ast_hash": "98fbdc721470e9285aa44a97940f71e9",
+    "semantic_hash": ""
+  },
+  "frontend-angular/src/app/app.component.ts": {
+    "mtime": 1789649080.2140875,
+    "seen": 1789649516.5324361,
+    "ast_hash": "481dcbc892df158fe18fcd9563b98e39",
+    "semantic_hash": ""
+  },
+  "frontend-angular/src/app/app.config.ts": {
+    "mtime": 1789649321.008853,
+    "seen": 1789649516.532439,
+    "ast_hash": "18b5676840d6b3a3b00ea559f38f9697",
+    "semantic_hash": ""
+  },
+  "frontend-angular/src/app/app.routes.ts": {
+    "mtime": 1789649080.2140875,
+    "seen": 1789649516.5324419,
+    "ast_hash": "bb5b0b990aa16f2d511066a25b2e2382",
+    "semantic_hash": ""
+  },
+  "frontend-angular/src/app/pages/character-creation/character-creation.component.ts": {
+    "mtime": 1789649080.2150865,
+    "seen": 1789649516.5324445,
+    "ast_hash": "b225b5ac70a543e07a581d6bf1b45319",
+    "semantic_hash": ""
+  },
+  "frontend-angular/src/app/pages/clan-territory/clan-territory.component.ts": {
+    "mtime": 1789649080.2160845,
+    "seen": 1789649516.5324466,
+    "ast_hash": "e0a8f055516a82318bc665d733b6b1e1",
+    "semantic_hash": ""
+  },
+  "frontend-angular/src/app/pages/dm-dashboard/dm-balance-panel/dm-balance-panel.component.ts": {
+    "mtime": 1789649382.358584,
+    "seen": 1789649516.5324492,
+    "ast_hash": "cefc5da33b7bc6a1afa2f242b5cadca2",
+    "semantic_hash": ""
+  },
+  "frontend-angular/src/app/pages/leaderboard/leaderboard.component.ts": {
+    "mtime": 1789649080.2170837,
+    "seen": 1789649516.5324516,
+    "ast_hash": "3b98a5919587e9ed2ec255dfbe413cfb",
+    "semantic_hash": ""
+  },
+  "frontend-angular/src/app/pages/player-dashboard/player-dashboard.component.ts": {
+    "mtime": 1789649452.680046,
+    "seen": 1789649516.5324543,
+    "ast_hash": "57379f77f2169f87c6244147c387c8ee",
+    "semantic_hash": ""
+  },
+  "frontend-angular/src/app/pages/runs-dungeons/runs-dungeons.component.ts": {
+    "mtime": 1789649235.0426207,
+    "seen": 1789649516.5324569,
+    "ast_hash": "8777913a3e4d920c7d1c17d3749eebc9",
+    "semantic_hash": ""
+  },
+  "frontend-angular/src/app/pages/talents-tree/talents-tree.component.ts": {
+    "mtime": 1789649151.3017657,
+    "seen": 1789649516.5324593,
+    "ast_hash": "19fc76884eff2410a3451526164dedd4",
+    "semantic_hash": ""
+  },
+  "frontend-angular/src/app/pages/tavern-market/tavern-market.component.ts": {
+    "mtime": 1789649169.1416829,
+    "seen": 1789649516.5324616,
+    "ast_hash": "4085640f1bd0a3a61e8ed24c5550e026",
+    "semantic_hash": ""
+  },
+  "frontend-angular/src/app/pages/transmute-forge/transmute-forge.component.ts": {
+    "mtime": 1789649260.253633,
+    "seen": 1789649516.5324647,
+    "ast_hash": "f018c7460b507341b0cd077b00f1c2e4",
+    "semantic_hash": ""
+  },
+  "frontend-angular/src/main.ts": {
+    "mtime": 1789649080.223007,
+    "seen": 1789649516.5324671,
+    "ast_hash": "b5c1d106e573fea21ef1ad9e4360e77a",
+    "semantic_hash": ""
+  },
+  "frontend-angular/tsconfig.app.json": {
+    "mtime": 1789649080.223007,
+    "seen": 1789649516.53247,
+    "ast_hash": "4ffe28f2bb2f4dd84e9eb70d9700a286",
+    "semantic_hash": ""
+  },
+  "frontend-angular/tsconfig.json": {
+    "mtime": 1789649080.223007,
+    "seen": 1789649516.532473,
+    "ast_hash": "64ffef0e7e8cb66043daa85cf5e0c0ac",
+    "semantic_hash": ""
+  },
+  "scripts/migrate_json_to_pg.py": {
+    "mtime": 1789613356.736084,
+    "seen": 1789649516.5425732,
+    "ast_hash": "525862e0a3be42e92648b326dfa4d0c5",
+    "semantic_hash": ""
+  },
+  "docker-compose.staging.yml": {
+    "mtime": 1789613390.7118025,
+    "seen": 1789649516.5427158,
+    "ast_hash": "8a988bf4506990443f04ffeb76065bcc",
+    "semantic_hash": ""
+  },
+  "frontend-angular/src/index.html": {
+    "mtime": 1789649080.2219975,
+    "seen": 1789649516.5430894,
+    "ast_hash": "7af83fb9f7f44985ce82b61f11a8c18e",
+    "semantic_hash": ""
+  },
+  "frontend-angular/public/icons/icon-192.png": {
+    "mtime": 1789649080.2080412,
+    "seen": 1789649516.5434923,
+    "ast_hash": "4ee5f6283f5f0fcac7843a7e7a8f69e7",
+    "semantic_hash": ""
+  },
+  "frontend-angular/public/icons/icon-512.png": {
+    "mtime": 1789649080.209076,
+    "seen": 1789649516.5434945,
+    "ast_hash": "980d1acb04c076319456c6060c60772a",
+    "semantic_hash": ""
+  },
+  "frontend-angular/public/icons/icon-maskable.png": {
+    "mtime": 1789649080.2100785,
+    "seen": 1789649516.5434961,
+    "ast_hash": "980d1acb04c076319456c6060c60772a",
+    "semantic_hash": ""
   }
 }

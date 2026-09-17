@@ -30,7 +30,7 @@ services:
     container_name: gremio_nest_api_staging
     restart: unless-stopped
     ports:
-      - "3005:3000"
+      - "3015:3000"
     environment:
       PORT: 3000
       DATABASE_URL: postgresql://cuervo_admin:cuervo_password_2026@gremio_postgres_staging:5432/nido_cuervos_db
@@ -49,7 +49,7 @@ services:
     container_name: gremio_angular_staging
     restart: unless-stopped
     ports:
-      - "8085:80"
+      - "8095:80"
     depends_on:
       - gremio_nest_api_staging
     networks:
