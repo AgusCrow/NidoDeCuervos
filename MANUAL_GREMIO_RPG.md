@@ -1,14 +1,14 @@
 # 📜 GUÍA MAESTRA Y MANUAL ENCICLOPÉDICO
 ## RPG "EL GREMIO DE LA TABERNA" & EXPANSIÓN "NIDO DE CUERVOS"
-### Sistema Gamificado Híbrido: PWA Móvil, Hardware NFC, Modo TV y Servidor 24/7
+### Sistema Gamificado Web: PWA Móvil, Modo TV y Servidor 24/7
 
 ---
 
 ## 🧭 1. VISIÓN DEL MUNDO Y CONCEPTO DEL JUEGO
 
-**El Gremio de la Taberna** es un ecosistema de juego de rol (RPG) híbrido presencial y digital en tiempo real. Combina un dispositivo físico en la barra de la taberna (ESP32 con lector NFC RFID) con una Progressive Web App (PWA) de alta fidelidad, un Modo TV público para proyecciones comunitarias 24/7 y aplicaciones nativas para Android (.apk) y PC Windows (.bat / .pyw).
+**El Gremio de la Taberna** es un ecosistema de juego de rol (RPG) digital en tiempo real. Cuenta con una Progressive Web App (PWA) de alta fidelidad, un Modo TV público para proyecciones comunitarias 24/7 y aplicaciones accesibles tanto para dispositivos móviles como de escritorio.
 
-Los aventureros ingresan a la taberna portando su **tarjeta o llavero NFC físico**, el cual sincroniza su perfil al instante mediante un toque en el hardware de la barra. De manera remota, a través de sus teléfonos o computadoras, gestionan su inventario, participan en duelos PvP, conquistan fortalezas en guerras de clanes de 24 horas y emprenden expediciones en la Senda Infinita.
+Los aventureros ingresan mediante sus cuentas de usuario para gestionar su inventario, participar en duelos PvP en la arena, conquistar fortalezas en guerras de clanes de 24 horas y emprender expediciones en la Senda Infinita.
 
 ---
 
@@ -16,18 +16,14 @@ Los aventureros ingresan a la taberna portando su **tarjeta o llavero NFC físic
 
 ```mermaid
 graph TD
-    subgraph Hardware Presencial
-        ESP32[ESP32 Microcontroller + RC522 NFC] -->|MQTT / Topics| Broker[Eclipse Mosquitto :1883]
-    end
-
     subgraph Servicios Externos
         WeatherAPI[Open-Meteo Weather API] -->|Datos Meteorológicos Reales| Backend
         TelegramBot[Bot Oficial de Telegram] -->|Alertas en Vivo| Backend
     end
 
     subgraph Servidor de Producción (:8083 / :3000)
-        Broker -->|Suscripción gremio/scans| Backend[Node.js Express + TypeScript :3000]
-        Backend -->|Persistencia Atómica| DB[(Almacén JSON / SQLite Store)]
+        Broker[Broker MQTT :1883] -->|Sincronización en Tiempo Real| Backend[Node.js Express + TypeScript :3000]
+        Backend -->|Persistencia Atómica| DB[(Almacén JSON / Store de Datos)]
         Backend -->|Canal SSE /public/events| Frontend
         Nginx[Nginx Reverse Proxy :8083] -->|Proxy API & Static| Backend
     end
@@ -217,13 +213,11 @@ El registro histórico, social y económico vivo de la taberna:
 
 ---
 
-#### 🌦️ Hardware NFC Presencial & Motor de Clima Real
-- **Hardware ESP32 + Lector RFID RC522**: Ubicado físicamente en la barra. Escanear el llavero NFC otorga el botín del dado presencial ($1d20$ + bonos).
-- **Duelos Rápidos de Barra**: Si 2 aventureros apoyan su tarjeta NFC con menos de 15 segundos de diferencia, el sistema dispara automáticamente un duelo de taberna en vivo en la pantalla del Modo TV.
-- **Motor Meteorológico (Open-Meteo API)**:
-  - 🌧️ Lluvia/Tormenta: $+35\text{ XP}$ y $+15\text{ Oro}$ planos (*Aventurero Inclemente*).
-  - 🌙 Noche de Taberna (21:00 a 04:00): $+25\%$ de oro en todas las actividades.
-  - ❄️ Frío/Calor Extremo: Doble avance en contratos y misiones.
+#### 🌦️ Motor Meteorológico y Clima Dinámico
+- **Sincronización Meteorológica (Open-Meteo API)**: Conexión con datos meteorológicos locales en tiempo real que alteran los efectos ambientales y recompensas en el juego.
+- 🌧️ **Lluvia / Tormenta**: $+35\text{ XP}$ y $+15\text{ Oro}$ adicionales (*Aventurero Inclemente*).
+- 🌙 **Noche de Taberna (21:00 a 04:00)**: $+25\%$ de oro en todas las actividades.
+- ❄️ **Temperaturas Extremas**: Bonificación de avance doble en contratos y misiones activas.
 
 ---
 
@@ -318,7 +312,7 @@ El registro histórico, social y económico vivo de la taberna:
 - **Integración con Bot de Telegram**: Notificaciones de compras y desafíos.
 
 ### [v1.0.0] - 2026-08-15
-- **Lanzamiento Oficial de la Taberna**: Autenticación dual NFC / Password, tienda de objetos, Modo TV interactivo y PWA móvil.
+- **Lanzamiento Oficial de la Taberna**: Autenticación de aventureros con contraseña segura, tienda de objetos, Modo TV interactivo y PWA móvil.
 
 ---
 
